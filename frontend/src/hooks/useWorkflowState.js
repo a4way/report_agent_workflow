@@ -141,7 +141,9 @@ export const useWorkflowState = () => {
       });
       
       if (response.data.success) {
-        setCurrentWorkflowId(response.data.workflow_id);
+        const workflowId = response.data.workflowId; // Backend sendet camelCase!
+        setCurrentWorkflowId(workflowId);
+        console.log('🔍 Backend Workflow ID gesetzt:', workflowId);
         addLog('success', '✅ Backend-API erfolgreich erreicht', 'System');
         // Handle real backend response here
         // For now, we'll still use simulation
@@ -153,6 +155,7 @@ export const useWorkflowState = () => {
         // Generate a mock workflow ID for simulation
         const mockWorkflowId = `workflow_${Date.now()}`;
         setCurrentWorkflowId(mockWorkflowId);
+        console.log('🔍 Mock Workflow ID gesetzt:', mockWorkflowId);
         await simulateWorkflowProgress(query, demoId);
       }
     }
