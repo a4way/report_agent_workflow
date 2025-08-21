@@ -1,0 +1,1201 @@
+order_id,customer_id,order_date,order_status,payment_method,device,country
+1,352,2025-08-08,paid,Credit Card,Desktop,CH
+2,220,2025-10-20,paid,PayPal,Mobile,DE
+3,49,2025-09-05,paid,PayPal,Mobile,DE
+4,378,2025-11-27,paid,Invoice,Mobile,DE
+5,140,2025-10-30,pending,PayPal,Mobile,DE
+6,351,2025-08-16,cancelled,PayPal,Desktop,DE
+7,271,2025-08-17,pending,Credit Card,Desktop,DE
+8,315,2025-10-17,paid,PayPal,Mobile,DE
+9,213,2025-09-13,paid,Bank Transfer,Mobile,DE
+10,122,2025-09-01,paid,Bank Transfer,Desktop,DE
+11,18,2025-08-21,cancelled,Credit Card,Mobile,AT
+12,360,2025-11-18,cancelled,PayPal,Desktop,DE
+13,86,2025-08-22,pending,Bank Transfer,Desktop,DE
+14,258,2025-08-29,paid,Credit Card,Tablet,CH
+15,88,2025-09-13,paid,Credit Card,Mobile,CH
+16,184,2025-08-03,paid,PayPal,Mobile,DE
+17,295,2025-11-16,paid,PayPal,Desktop,DE
+18,362,2025-09-27,paid,Credit Card,Mobile,NL
+19,388,2025-11-12,paid,Bank Transfer,Mobile,DE
+20,10,2025-08-21,paid,PayPal,Desktop,DE
+21,112,2025-08-13,paid,Credit Card,Mobile,AT
+22,314,2025-09-23,returned,Credit Card,Mobile,CH
+23,377,2025-08-20,paid,Credit Card,Desktop,DE
+24,312,2025-10-22,pending,Credit Card,Desktop,NL
+25,20,2025-08-10,returned,PayPal,Desktop,DE
+26,310,2025-11-12,paid,Credit Card,Desktop,DE
+27,188,2025-09-26,paid,Credit Card,Mobile,CH
+28,221,2025-08-14,paid,Credit Card,Desktop,DE
+29,388,2025-11-28,paid,PayPal,Mobile,DE
+30,159,2025-09-29,cancelled,Credit Card,Desktop,DE
+31,152,2025-11-17,paid,Invoice,Desktop,DE
+32,356,2025-10-03,paid,Credit Card,Desktop,DE
+33,113,2025-09-24,paid,Credit Card,Desktop,CH
+34,251,2025-09-16,pending,Bank Transfer,Mobile,DE
+35,198,2025-08-04,paid,Credit Card,Mobile,NL
+36,47,2025-10-17,paid,PayPal,Tablet,CH
+37,325,2025-11-29,paid,Invoice,Desktop,DE
+38,107,2025-11-21,paid,PayPal,Mobile,DE
+39,365,2025-09-20,pending,Credit Card,Desktop,DE
+40,69,2025-11-01,paid,Credit Card,Desktop,CH
+41,192,2025-08-05,paid,PayPal,Desktop,DE
+42,295,2025-11-22,pending,PayPal,Desktop,DE
+43,297,2025-09-23,paid,Credit Card,Desktop,DE
+44,84,2025-08-24,paid,Credit Card,Desktop,DE
+45,106,2025-08-30,paid,Credit Card,Desktop,DE
+46,270,2025-11-28,pending,Credit Card,Desktop,DE
+47,217,2025-10-16,paid,Credit Card,Mobile,DE
+48,107,2025-10-23,paid,PayPal,Desktop,DE
+49,178,2025-09-02,cancelled,Credit Card,Desktop,DE
+50,160,2025-11-28,paid,Credit Card,Mobile,DE
+51,154,2025-11-16,cancelled,PayPal,Desktop,DE
+52,21,2025-10-21,paid,PayPal,Desktop,DE
+53,305,2025-08-19,paid,Bank Transfer,Tablet,DE
+54,161,2025-09-19,paid,Credit Card,Desktop,AT
+55,86,2025-11-27,paid,Invoice,Desktop,DE
+56,28,2025-09-27,paid,PayPal,Mobile,DE
+57,98,2025-10-09,paid,PayPal,Desktop,NL
+58,5,2025-08-02,paid,Credit Card,Desktop,DE
+59,144,2025-11-20,paid,PayPal,Desktop,NL
+60,294,2025-09-29,paid,Invoice,Mobile,DE
+61,49,2025-10-03,paid,Bank Transfer,Mobile,DE
+62,68,2025-11-18,cancelled,Credit Card,Desktop,AT
+63,79,2025-10-25,paid,Credit Card,Mobile,DE
+64,168,2025-09-27,cancelled,PayPal,Mobile,DE
+65,248,2025-08-03,pending,Credit Card,Desktop,AT
+66,262,2025-09-08,paid,PayPal,Desktop,DE
+67,197,2025-09-20,paid,Credit Card,Desktop,DE
+68,297,2025-09-05,paid,Credit Card,Mobile,DE
+69,399,2025-09-17,returned,Credit Card,Desktop,DE
+70,268,2025-08-02,paid,Bank Transfer,Mobile,DE
+71,114,2025-11-15,pending,Credit Card,Desktop,DE
+72,8,2025-11-09,paid,PayPal,Desktop,NL
+73,366,2025-11-26,returned,Credit Card,Mobile,NL
+74,375,2025-08-16,pending,Credit Card,Desktop,DE
+75,158,2025-08-13,paid,Invoice,Tablet,NL
+76,59,2025-11-27,paid,PayPal,Desktop,DE
+77,196,2025-08-25,cancelled,Credit Card,Desktop,AT
+78,227,2025-09-30,paid,Credit Card,Mobile,NL
+79,134,2025-10-22,cancelled,Invoice,Mobile,NL
+80,364,2025-11-16,paid,Credit Card,Mobile,DE
+81,76,2025-10-31,paid,Credit Card,Desktop,DE
+82,218,2025-10-01,paid,Credit Card,Mobile,DE
+83,307,2025-09-16,paid,PayPal,Desktop,DE
+84,384,2025-08-22,paid,PayPal,Mobile,NL
+85,347,2025-09-04,paid,PayPal,Desktop,DE
+86,248,2025-08-28,paid,Credit Card,Mobile,AT
+87,1,2025-10-11,paid,Credit Card,Desktop,AT
+88,303,2025-09-07,paid,Credit Card,Mobile,DE
+89,302,2025-11-24,pending,Bank Transfer,Mobile,DE
+90,355,2025-10-16,returned,PayPal,Mobile,DE
+91,219,2025-08-23,paid,Credit Card,Desktop,DE
+92,142,2025-11-08,paid,Credit Card,Desktop,NL
+93,334,2025-10-23,paid,Credit Card,Desktop,DE
+94,102,2025-10-26,paid,PayPal,Tablet,DE
+95,387,2025-09-11,paid,PayPal,Tablet,CH
+96,206,2025-10-02,paid,PayPal,Mobile,DE
+97,275,2025-09-16,paid,Credit Card,Desktop,NL
+98,164,2025-09-09,paid,Credit Card,Mobile,DE
+99,308,2025-10-28,cancelled,Credit Card,Desktop,DE
+100,334,2025-11-02,paid,Credit Card,Mobile,DE
+101,2,2025-11-13,paid,Credit Card,Tablet,DE
+102,255,2025-09-24,paid,PayPal,Desktop,AT
+103,268,2025-09-04,paid,PayPal,Mobile,DE
+104,149,2025-10-08,paid,Credit Card,Desktop,DE
+105,201,2025-09-30,paid,Bank Transfer,Desktop,DE
+106,65,2025-08-08,paid,Credit Card,Desktop,DE
+107,76,2025-09-15,cancelled,PayPal,Mobile,DE
+108,93,2025-08-22,paid,PayPal,Mobile,DE
+109,157,2025-09-20,paid,Credit Card,Desktop,DE
+110,76,2025-09-14,pending,Credit Card,Desktop,DE
+111,347,2025-09-24,pending,Credit Card,Desktop,DE
+112,214,2025-08-25,paid,Credit Card,Mobile,DE
+113,283,2025-08-08,paid,Credit Card,Desktop,DE
+114,109,2025-11-21,paid,Credit Card,Desktop,DE
+115,340,2025-09-25,paid,Credit Card,Mobile,CH
+116,369,2025-10-01,returned,PayPal,Desktop,DE
+117,295,2025-10-24,paid,Credit Card,Desktop,DE
+118,310,2025-11-13,paid,Credit Card,Mobile,DE
+119,344,2025-08-21,paid,Credit Card,Mobile,AT
+120,397,2025-10-03,paid,Invoice,Desktop,CH
+121,46,2025-09-14,paid,Credit Card,Desktop,AT
+122,109,2025-08-12,paid,Credit Card,Mobile,DE
+123,250,2025-10-08,paid,PayPal,Desktop,DE
+124,215,2025-09-18,paid,PayPal,Desktop,CH
+125,161,2025-09-05,paid,Credit Card,Desktop,AT
+126,84,2025-11-21,paid,Credit Card,Desktop,DE
+127,258,2025-10-02,paid,PayPal,Mobile,CH
+128,266,2025-08-14,paid,Bank Transfer,Mobile,DE
+129,28,2025-08-03,paid,Credit Card,Mobile,DE
+130,166,2025-08-03,paid,Credit Card,Desktop,DE
+131,268,2025-09-04,paid,Credit Card,Desktop,DE
+132,357,2025-10-24,cancelled,Credit Card,Desktop,DE
+133,294,2025-08-28,paid,Bank Transfer,Desktop,DE
+134,375,2025-10-12,paid,PayPal,Desktop,DE
+135,354,2025-09-01,cancelled,Bank Transfer,Mobile,AT
+136,63,2025-08-23,paid,PayPal,Desktop,DE
+137,313,2025-11-26,paid,PayPal,Desktop,DE
+138,156,2025-09-06,paid,Credit Card,Mobile,CH
+139,47,2025-08-20,paid,Credit Card,Desktop,CH
+140,126,2025-08-11,paid,PayPal,Mobile,DE
+141,176,2025-11-24,paid,PayPal,Desktop,CH
+142,113,2025-11-17,pending,Credit Card,Tablet,CH
+143,67,2025-10-14,paid,Credit Card,Desktop,DE
+144,363,2025-10-03,paid,Credit Card,Desktop,DE
+145,125,2025-08-15,paid,Credit Card,Mobile,DE
+146,37,2025-09-11,paid,Credit Card,Desktop,DE
+147,274,2025-10-12,pending,Credit Card,Tablet,DE
+148,109,2025-11-04,paid,Credit Card,Desktop,DE
+149,305,2025-08-13,paid,PayPal,Mobile,DE
+150,387,2025-09-11,cancelled,PayPal,Desktop,CH
+151,341,2025-09-15,paid,Credit Card,Mobile,NL
+152,324,2025-11-23,paid,PayPal,Tablet,DE
+153,397,2025-11-19,cancelled,Credit Card,Mobile,CH
+154,99,2025-10-21,paid,PayPal,Mobile,CH
+155,165,2025-11-11,paid,Credit Card,Desktop,DE
+156,164,2025-11-26,paid,Invoice,Mobile,DE
+157,267,2025-09-23,paid,Bank Transfer,Desktop,DE
+158,395,2025-11-11,paid,PayPal,Desktop,NL
+159,46,2025-11-30,pending,Credit Card,Desktop,AT
+160,304,2025-11-16,paid,Bank Transfer,Mobile,AT
+161,250,2025-11-08,paid,Credit Card,Mobile,DE
+162,399,2025-08-27,paid,Credit Card,Mobile,DE
+163,179,2025-09-22,pending,Credit Card,Mobile,CH
+164,239,2025-08-04,cancelled,Credit Card,Tablet,NL
+165,328,2025-11-24,paid,PayPal,Desktop,DE
+166,328,2025-08-19,paid,Credit Card,Desktop,DE
+167,189,2025-08-31,paid,PayPal,Mobile,NL
+168,214,2025-09-12,returned,Credit Card,Mobile,DE
+169,277,2025-10-19,cancelled,Credit Card,Mobile,DE
+170,286,2025-09-26,cancelled,Invoice,Desktop,CH
+171,282,2025-11-21,paid,Credit Card,Desktop,DE
+172,292,2025-08-25,paid,Credit Card,Desktop,DE
+173,136,2025-08-05,cancelled,PayPal,Mobile,DE
+174,35,2025-10-05,paid,Credit Card,Mobile,DE
+175,384,2025-08-04,paid,Credit Card,Desktop,NL
+176,259,2025-08-14,cancelled,Bank Transfer,Desktop,NL
+177,61,2025-10-22,paid,Credit Card,Desktop,CH
+178,375,2025-09-03,cancelled,PayPal,Desktop,DE
+179,13,2025-09-25,paid,Credit Card,Desktop,AT
+180,392,2025-10-26,pending,Credit Card,Mobile,DE
+181,221,2025-11-11,paid,Credit Card,Mobile,DE
+182,269,2025-08-21,paid,Credit Card,Mobile,DE
+183,31,2025-10-20,paid,Bank Transfer,Desktop,DE
+184,54,2025-09-21,paid,Credit Card,Desktop,DE
+185,366,2025-11-24,paid,Credit Card,Mobile,NL
+186,260,2025-10-16,pending,PayPal,Desktop,DE
+187,290,2025-10-21,cancelled,PayPal,Desktop,DE
+188,49,2025-10-18,paid,Credit Card,Mobile,DE
+189,274,2025-11-04,paid,Bank Transfer,Mobile,DE
+190,264,2025-09-10,paid,Bank Transfer,Desktop,NL
+191,156,2025-08-11,cancelled,Credit Card,Mobile,CH
+192,162,2025-09-13,paid,Bank Transfer,Mobile,DE
+193,83,2025-09-18,paid,Bank Transfer,Mobile,DE
+194,186,2025-10-26,paid,Credit Card,Mobile,NL
+195,120,2025-09-24,paid,Credit Card,Mobile,NL
+196,13,2025-11-09,pending,PayPal,Tablet,AT
+197,281,2025-11-02,paid,Credit Card,Mobile,DE
+198,293,2025-09-11,paid,Credit Card,Desktop,DE
+199,41,2025-11-07,paid,Credit Card,Desktop,DE
+200,236,2025-11-13,paid,PayPal,Desktop,DE
+201,397,2025-11-08,returned,Credit Card,Mobile,CH
+202,310,2025-09-25,paid,PayPal,Mobile,DE
+203,237,2025-09-03,paid,Bank Transfer,Desktop,DE
+204,3,2025-08-28,pending,Credit Card,Mobile,DE
+205,310,2025-09-23,paid,Credit Card,Desktop,DE
+206,13,2025-09-26,cancelled,PayPal,Mobile,AT
+207,303,2025-09-22,paid,Credit Card,Mobile,DE
+208,258,2025-10-25,paid,Bank Transfer,Desktop,CH
+209,387,2025-11-19,paid,Bank Transfer,Desktop,CH
+210,29,2025-09-12,returned,Credit Card,Desktop,NL
+211,321,2025-10-23,paid,Credit Card,Desktop,DE
+212,92,2025-09-27,returned,PayPal,Desktop,AT
+213,175,2025-11-02,paid,Credit Card,Desktop,DE
+214,224,2025-11-25,paid,PayPal,Desktop,DE
+215,313,2025-08-12,paid,Credit Card,Mobile,DE
+216,135,2025-11-08,returned,Credit Card,Mobile,DE
+217,225,2025-10-26,cancelled,Credit Card,Desktop,DE
+218,132,2025-11-12,paid,Credit Card,Desktop,DE
+219,205,2025-10-18,paid,PayPal,Mobile,DE
+220,104,2025-08-09,paid,Credit Card,Mobile,AT
+221,331,2025-08-15,paid,PayPal,Desktop,DE
+222,90,2025-11-16,paid,Bank Transfer,Mobile,AT
+223,301,2025-10-22,paid,PayPal,Mobile,DE
+224,351,2025-08-28,paid,PayPal,Mobile,DE
+225,102,2025-10-27,paid,Credit Card,Desktop,DE
+226,174,2025-11-22,paid,Bank Transfer,Desktop,NL
+227,361,2025-10-14,paid,Credit Card,Desktop,DE
+228,226,2025-08-15,paid,Bank Transfer,Tablet,DE
+229,390,2025-09-07,pending,PayPal,Mobile,DE
+230,302,2025-08-13,paid,PayPal,Mobile,DE
+231,8,2025-09-13,returned,PayPal,Desktop,NL
+232,331,2025-10-16,paid,Credit Card,Mobile,DE
+233,169,2025-08-16,paid,Credit Card,Desktop,CH
+234,187,2025-10-29,paid,Credit Card,Desktop,DE
+235,274,2025-08-19,paid,Credit Card,Desktop,DE
+236,390,2025-08-04,cancelled,PayPal,Desktop,DE
+237,273,2025-11-15,paid,Invoice,Tablet,NL
+238,8,2025-08-13,returned,PayPal,Desktop,NL
+239,94,2025-10-04,paid,PayPal,Tablet,DE
+240,242,2025-10-25,returned,PayPal,Mobile,DE
+241,36,2025-11-09,paid,PayPal,Mobile,DE
+242,216,2025-09-11,paid,PayPal,Mobile,DE
+243,91,2025-08-22,paid,Credit Card,Desktop,DE
+244,141,2025-09-14,paid,Credit Card,Desktop,DE
+245,155,2025-09-03,pending,Credit Card,Mobile,CH
+246,241,2025-10-06,paid,PayPal,Mobile,AT
+247,113,2025-11-11,paid,Credit Card,Mobile,CH
+248,116,2025-11-01,paid,Credit Card,Mobile,DE
+249,114,2025-08-01,paid,Bank Transfer,Desktop,DE
+250,266,2025-09-28,paid,Credit Card,Desktop,DE
+251,278,2025-11-06,paid,Credit Card,Desktop,AT
+252,256,2025-08-11,paid,Credit Card,Desktop,DE
+253,371,2025-08-19,paid,Credit Card,Mobile,DE
+254,154,2025-09-09,paid,PayPal,Mobile,DE
+255,84,2025-08-15,paid,Credit Card,Desktop,DE
+256,368,2025-08-19,paid,Credit Card,Mobile,CH
+257,324,2025-11-30,pending,Credit Card,Desktop,DE
+258,280,2025-08-27,returned,Credit Card,Mobile,DE
+259,24,2025-08-24,paid,Credit Card,Mobile,CH
+260,181,2025-11-28,paid,Bank Transfer,Desktop,AT
+261,181,2025-10-01,paid,PayPal,Desktop,AT
+262,326,2025-11-09,paid,Credit Card,Desktop,DE
+263,85,2025-09-30,paid,Bank Transfer,Desktop,DE
+264,332,2025-09-07,paid,PayPal,Desktop,DE
+265,397,2025-10-26,paid,Bank Transfer,Mobile,CH
+266,112,2025-08-27,paid,Credit Card,Desktop,AT
+267,47,2025-11-26,paid,Credit Card,Mobile,CH
+268,310,2025-08-21,paid,Credit Card,Desktop,DE
+269,202,2025-09-01,paid,PayPal,Mobile,DE
+270,139,2025-11-04,paid,Credit Card,Mobile,DE
+271,111,2025-08-25,paid,PayPal,Mobile,DE
+272,191,2025-10-28,paid,Invoice,Desktop,DE
+273,194,2025-11-12,paid,Credit Card,Mobile,DE
+274,378,2025-09-08,returned,Credit Card,Desktop,DE
+275,169,2025-11-01,paid,Credit Card,Mobile,CH
+276,245,2025-08-03,paid,PayPal,Mobile,DE
+277,109,2025-09-24,paid,Credit Card,Desktop,DE
+278,100,2025-09-01,paid,Bank Transfer,Desktop,DE
+279,43,2025-11-24,paid,PayPal,Mobile,DE
+280,162,2025-09-30,paid,PayPal,Mobile,DE
+281,390,2025-11-29,paid,Credit Card,Desktop,DE
+282,283,2025-10-19,returned,Credit Card,Mobile,DE
+283,147,2025-10-15,paid,Bank Transfer,Mobile,DE
+284,95,2025-10-07,paid,Credit Card,Mobile,NL
+285,313,2025-11-09,paid,Credit Card,Mobile,DE
+286,114,2025-08-16,pending,PayPal,Desktop,DE
+287,328,2025-11-05,paid,Credit Card,Desktop,DE
+288,283,2025-08-12,paid,Credit Card,Mobile,DE
+289,334,2025-10-08,paid,PayPal,Desktop,DE
+290,368,2025-11-13,paid,Credit Card,Desktop,CH
+291,47,2025-09-08,pending,PayPal,Mobile,CH
+292,79,2025-10-26,paid,Credit Card,Mobile,DE
+293,248,2025-08-20,paid,Credit Card,Desktop,AT
+294,57,2025-08-08,paid,Credit Card,Desktop,NL
+295,6,2025-09-27,paid,Credit Card,Mobile,DE
+296,219,2025-09-18,paid,Credit Card,Desktop,DE
+297,345,2025-09-04,paid,Credit Card,Mobile,DE
+298,22,2025-08-26,paid,Credit Card,Desktop,AT
+299,230,2025-08-20,paid,Credit Card,Mobile,AT
+300,84,2025-11-07,paid,Credit Card,Desktop,DE
+301,323,2025-08-06,paid,PayPal,Mobile,DE
+302,48,2025-10-09,paid,Credit Card,Mobile,DE
+303,65,2025-10-22,paid,Credit Card,Mobile,DE
+304,150,2025-09-20,returned,Credit Card,Mobile,DE
+305,98,2025-08-30,paid,Credit Card,Desktop,NL
+306,68,2025-08-07,paid,Credit Card,Tablet,AT
+307,73,2025-11-17,paid,PayPal,Desktop,DE
+308,166,2025-08-17,paid,PayPal,Desktop,DE
+309,244,2025-10-24,pending,Credit Card,Desktop,DE
+310,93,2025-10-12,paid,Invoice,Desktop,DE
+311,43,2025-11-29,paid,PayPal,Desktop,DE
+312,39,2025-11-21,cancelled,Credit Card,Mobile,DE
+313,63,2025-11-05,paid,Credit Card,Desktop,DE
+314,296,2025-10-14,paid,PayPal,Mobile,DE
+315,331,2025-08-16,paid,Invoice,Mobile,DE
+316,38,2025-08-19,paid,Credit Card,Mobile,DE
+317,387,2025-10-13,paid,Credit Card,Tablet,CH
+318,264,2025-09-20,cancelled,Credit Card,Desktop,NL
+319,107,2025-10-28,paid,Bank Transfer,Mobile,DE
+320,37,2025-08-09,paid,PayPal,Desktop,DE
+321,58,2025-11-15,paid,PayPal,Desktop,DE
+322,114,2025-11-15,pending,Credit Card,Mobile,DE
+323,150,2025-08-11,paid,Credit Card,Mobile,DE
+324,135,2025-09-30,paid,Credit Card,Desktop,DE
+325,129,2025-09-24,paid,Credit Card,Desktop,DE
+326,102,2025-09-07,paid,Credit Card,Mobile,DE
+327,348,2025-08-21,paid,PayPal,Mobile,DE
+328,83,2025-09-04,cancelled,Credit Card,Mobile,DE
+329,283,2025-09-25,paid,Credit Card,Mobile,DE
+330,378,2025-09-21,returned,PayPal,Desktop,DE
+331,55,2025-11-04,cancelled,PayPal,Desktop,NL
+332,314,2025-09-08,paid,Credit Card,Mobile,CH
+333,6,2025-11-23,cancelled,Credit Card,Mobile,DE
+334,261,2025-09-11,returned,Credit Card,Desktop,DE
+335,313,2025-10-25,paid,Credit Card,Desktop,DE
+336,160,2025-09-15,paid,Credit Card,Desktop,DE
+337,247,2025-11-12,returned,Credit Card,Mobile,DE
+338,94,2025-08-22,paid,Credit Card,Desktop,DE
+339,122,2025-08-10,paid,PayPal,Desktop,DE
+340,234,2025-08-28,paid,Credit Card,Desktop,DE
+341,127,2025-08-19,paid,PayPal,Mobile,CH
+342,363,2025-08-09,paid,Credit Card,Mobile,DE
+343,330,2025-09-09,paid,Credit Card,Mobile,DE
+344,141,2025-11-26,paid,Credit Card,Mobile,DE
+345,48,2025-09-18,paid,Bank Transfer,Desktop,DE
+346,344,2025-08-26,paid,Credit Card,Mobile,AT
+347,7,2025-09-27,paid,Credit Card,Desktop,CH
+348,17,2025-09-12,paid,Credit Card,Mobile,DE
+349,117,2025-11-15,paid,Credit Card,Desktop,DE
+350,156,2025-10-12,paid,PayPal,Mobile,CH
+351,336,2025-09-10,paid,Credit Card,Mobile,DE
+352,206,2025-08-29,paid,Bank Transfer,Mobile,DE
+353,387,2025-08-11,paid,Credit Card,Mobile,CH
+354,384,2025-09-17,paid,Credit Card,Desktop,NL
+355,239,2025-09-26,paid,PayPal,Mobile,NL
+356,49,2025-09-14,paid,Credit Card,Tablet,DE
+357,20,2025-10-03,pending,Credit Card,Desktop,DE
+358,3,2025-09-23,paid,PayPal,Mobile,DE
+359,132,2025-09-29,paid,PayPal,Mobile,DE
+360,347,2025-08-30,paid,PayPal,Desktop,DE
+361,348,2025-08-31,cancelled,PayPal,Mobile,DE
+362,136,2025-10-12,paid,PayPal,Mobile,DE
+363,295,2025-11-04,paid,Credit Card,Mobile,DE
+364,192,2025-09-13,paid,Credit Card,Desktop,DE
+365,220,2025-08-06,paid,Bank Transfer,Mobile,DE
+366,387,2025-08-21,paid,Bank Transfer,Mobile,CH
+367,62,2025-09-11,paid,Credit Card,Mobile,DE
+368,16,2025-08-08,paid,Credit Card,Mobile,DE
+369,386,2025-11-02,returned,PayPal,Mobile,DE
+370,336,2025-10-20,paid,Credit Card,Desktop,DE
+371,279,2025-08-18,pending,Credit Card,Mobile,NL
+372,239,2025-10-06,pending,PayPal,Desktop,NL
+373,173,2025-11-04,paid,PayPal,Desktop,DE
+374,356,2025-08-07,paid,PayPal,Mobile,DE
+375,388,2025-11-04,cancelled,Credit Card,Desktop,DE
+376,357,2025-10-23,paid,Credit Card,Desktop,DE
+377,63,2025-08-22,paid,Bank Transfer,Desktop,DE
+378,5,2025-09-29,paid,PayPal,Desktop,DE
+379,56,2025-11-18,returned,Credit Card,Mobile,DE
+380,104,2025-10-16,cancelled,PayPal,Desktop,AT
+381,182,2025-09-07,paid,Invoice,Desktop,AT
+382,287,2025-10-30,cancelled,Bank Transfer,Tablet,NL
+383,163,2025-11-03,paid,Credit Card,Desktop,NL
+384,187,2025-08-21,cancelled,PayPal,Desktop,DE
+385,304,2025-11-25,paid,Credit Card,Mobile,AT
+386,114,2025-09-18,cancelled,Credit Card,Mobile,DE
+387,235,2025-09-27,paid,PayPal,Mobile,DE
+388,138,2025-10-22,paid,Invoice,Mobile,DE
+389,171,2025-10-05,paid,Credit Card,Desktop,DE
+390,211,2025-10-26,pending,Bank Transfer,Desktop,DE
+391,197,2025-10-02,paid,Invoice,Tablet,DE
+392,388,2025-11-26,cancelled,PayPal,Mobile,DE
+393,203,2025-09-01,paid,PayPal,Mobile,CH
+394,210,2025-11-28,pending,Credit Card,Mobile,AT
+395,59,2025-10-28,paid,Credit Card,Desktop,DE
+396,64,2025-10-10,paid,Credit Card,Mobile,AT
+397,214,2025-11-22,paid,PayPal,Desktop,DE
+398,112,2025-09-02,paid,PayPal,Mobile,AT
+399,118,2025-08-20,pending,Credit Card,Desktop,NL
+400,94,2025-08-13,paid,PayPal,Desktop,DE
+401,292,2025-09-23,paid,PayPal,Desktop,DE
+402,150,2025-08-20,paid,Credit Card,Desktop,DE
+403,128,2025-10-23,returned,Bank Transfer,Mobile,DE
+404,7,2025-10-19,returned,Bank Transfer,Desktop,CH
+405,181,2025-10-26,paid,PayPal,Tablet,AT
+406,212,2025-09-06,returned,PayPal,Tablet,DE
+407,264,2025-10-18,returned,Credit Card,Desktop,NL
+408,231,2025-09-22,pending,PayPal,Mobile,DE
+409,350,2025-08-29,paid,Credit Card,Desktop,DE
+410,364,2025-09-27,paid,Credit Card,Desktop,DE
+411,394,2025-09-01,paid,Credit Card,Tablet,DE
+412,126,2025-11-29,pending,Credit Card,Desktop,DE
+413,360,2025-08-11,paid,Credit Card,Desktop,DE
+414,60,2025-08-10,paid,Credit Card,Mobile,DE
+415,36,2025-11-09,paid,Bank Transfer,Mobile,DE
+416,166,2025-10-27,paid,Credit Card,Desktop,DE
+417,375,2025-08-11,paid,PayPal,Desktop,DE
+418,266,2025-09-09,paid,Credit Card,Desktop,DE
+419,316,2025-10-01,returned,Credit Card,Tablet,DE
+420,313,2025-09-24,paid,Credit Card,Desktop,DE
+421,397,2025-10-28,paid,PayPal,Mobile,CH
+422,399,2025-11-14,paid,Credit Card,Mobile,DE
+423,337,2025-09-01,returned,Credit Card,Desktop,NL
+424,82,2025-10-16,paid,Credit Card,Desktop,DE
+425,211,2025-09-29,paid,Bank Transfer,Desktop,DE
+426,295,2025-10-07,paid,Credit Card,Mobile,DE
+427,365,2025-10-20,cancelled,Credit Card,Mobile,DE
+428,188,2025-10-29,returned,Credit Card,Tablet,CH
+429,72,2025-08-25,paid,Credit Card,Desktop,DE
+430,120,2025-10-31,paid,Bank Transfer,Desktop,NL
+431,246,2025-11-06,pending,PayPal,Mobile,CH
+432,247,2025-10-11,paid,PayPal,Desktop,DE
+433,394,2025-08-03,returned,Credit Card,Mobile,DE
+434,349,2025-10-08,paid,PayPal,Desktop,DE
+435,254,2025-10-24,returned,Credit Card,Desktop,NL
+436,13,2025-09-14,returned,PayPal,Mobile,AT
+437,205,2025-10-20,paid,Credit Card,Desktop,DE
+438,273,2025-08-24,paid,Bank Transfer,Desktop,NL
+439,174,2025-10-11,paid,Credit Card,Mobile,NL
+440,229,2025-11-21,cancelled,PayPal,Mobile,CH
+441,246,2025-10-21,paid,PayPal,Mobile,CH
+442,221,2025-11-18,cancelled,Credit Card,Desktop,DE
+443,149,2025-11-20,paid,Credit Card,Mobile,DE
+444,201,2025-09-21,paid,Credit Card,Desktop,DE
+445,180,2025-08-30,paid,Credit Card,Mobile,DE
+446,1,2025-09-13,paid,Credit Card,Desktop,AT
+447,271,2025-08-12,paid,Credit Card,Mobile,DE
+448,72,2025-08-27,paid,Credit Card,Mobile,DE
+449,190,2025-11-23,cancelled,Credit Card,Mobile,DE
+450,221,2025-10-24,paid,Bank Transfer,Desktop,DE
+451,102,2025-09-06,paid,Credit Card,Desktop,DE
+452,227,2025-11-23,paid,Credit Card,Tablet,NL
+453,63,2025-11-12,pending,Credit Card,Mobile,DE
+454,147,2025-09-25,paid,PayPal,Mobile,DE
+455,371,2025-11-24,paid,Credit Card,Desktop,DE
+456,58,2025-08-13,paid,PayPal,Mobile,DE
+457,247,2025-09-29,pending,Credit Card,Desktop,DE
+458,360,2025-09-25,paid,Credit Card,Desktop,DE
+459,296,2025-11-05,pending,Credit Card,Desktop,DE
+460,388,2025-09-07,paid,Credit Card,Desktop,DE
+461,76,2025-08-31,paid,Invoice,Desktop,DE
+462,290,2025-10-06,paid,Credit Card,Mobile,DE
+463,282,2025-08-20,cancelled,PayPal,Mobile,DE
+464,5,2025-10-06,cancelled,Credit Card,Desktop,DE
+465,105,2025-09-22,paid,PayPal,Mobile,DE
+466,340,2025-08-12,pending,Credit Card,Mobile,CH
+467,129,2025-11-26,paid,Credit Card,Desktop,DE
+468,340,2025-09-18,cancelled,Credit Card,Desktop,CH
+469,372,2025-09-07,paid,Bank Transfer,Desktop,DE
+470,302,2025-08-25,paid,Credit Card,Mobile,DE
+471,113,2025-11-15,paid,PayPal,Mobile,CH
+472,18,2025-08-21,cancelled,PayPal,Mobile,AT
+473,40,2025-11-22,paid,Bank Transfer,Desktop,DE
+474,203,2025-09-30,cancelled,Credit Card,Desktop,CH
+475,37,2025-09-25,paid,PayPal,Desktop,DE
+476,59,2025-11-20,cancelled,PayPal,Mobile,DE
+477,267,2025-10-31,paid,Bank Transfer,Mobile,DE
+478,381,2025-09-23,paid,PayPal,Desktop,DE
+479,186,2025-10-24,paid,Credit Card,Desktop,NL
+480,345,2025-10-15,paid,Credit Card,Tablet,DE
+481,385,2025-10-04,paid,PayPal,Mobile,DE
+482,335,2025-10-20,paid,Bank Transfer,Mobile,DE
+483,190,2025-09-16,paid,PayPal,Desktop,DE
+484,166,2025-10-20,paid,Bank Transfer,Mobile,DE
+485,14,2025-11-19,paid,PayPal,Mobile,DE
+486,269,2025-11-21,paid,Credit Card,Desktop,DE
+487,197,2025-10-25,paid,Credit Card,Mobile,DE
+488,303,2025-08-05,paid,Credit Card,Mobile,DE
+489,242,2025-08-18,paid,Bank Transfer,Mobile,DE
+490,391,2025-09-13,paid,PayPal,Mobile,NL
+491,337,2025-09-04,paid,PayPal,Desktop,NL
+492,44,2025-11-12,paid,Credit Card,Mobile,DE
+493,50,2025-10-04,paid,PayPal,Mobile,DE
+494,128,2025-08-14,paid,Credit Card,Desktop,DE
+495,296,2025-09-28,paid,Bank Transfer,Desktop,DE
+496,346,2025-08-28,paid,PayPal,Desktop,CH
+497,136,2025-08-24,pending,Credit Card,Desktop,DE
+498,264,2025-10-10,pending,Bank Transfer,Mobile,NL
+499,313,2025-10-19,paid,PayPal,Mobile,DE
+500,197,2025-11-25,paid,PayPal,Mobile,DE
+501,173,2025-08-23,returned,Credit Card,Mobile,DE
+502,108,2025-08-04,cancelled,Credit Card,Desktop,DE
+503,271,2025-09-09,paid,Credit Card,Mobile,DE
+504,6,2025-11-20,returned,PayPal,Mobile,DE
+505,299,2025-08-17,paid,Credit Card,Desktop,DE
+506,389,2025-09-01,paid,PayPal,Mobile,DE
+507,150,2025-11-20,paid,Credit Card,Mobile,DE
+508,393,2025-09-29,paid,Credit Card,Desktop,DE
+509,251,2025-11-13,paid,Credit Card,Mobile,DE
+510,69,2025-09-16,paid,Bank Transfer,Mobile,CH
+511,237,2025-11-28,paid,PayPal,Mobile,DE
+512,314,2025-11-02,paid,Credit Card,Mobile,CH
+513,116,2025-09-17,paid,Credit Card,Desktop,DE
+514,214,2025-09-14,paid,Credit Card,Desktop,DE
+515,258,2025-10-15,paid,Bank Transfer,Desktop,CH
+516,272,2025-11-21,paid,Bank Transfer,Mobile,CH
+517,144,2025-08-06,cancelled,Credit Card,Desktop,NL
+518,298,2025-10-15,paid,PayPal,Desktop,DE
+519,315,2025-08-27,paid,Credit Card,Mobile,DE
+520,367,2025-11-27,paid,Credit Card,Desktop,DE
+521,254,2025-09-12,cancelled,Credit Card,Desktop,NL
+522,8,2025-10-08,paid,Credit Card,Desktop,NL
+523,175,2025-10-15,paid,Credit Card,Desktop,DE
+524,71,2025-11-17,returned,PayPal,Mobile,DE
+525,399,2025-11-08,paid,PayPal,Desktop,DE
+526,21,2025-10-03,paid,Bank Transfer,Mobile,DE
+527,281,2025-10-09,paid,Credit Card,Desktop,DE
+528,146,2025-10-08,cancelled,PayPal,Desktop,DE
+529,34,2025-08-13,paid,Invoice,Desktop,NL
+530,180,2025-09-21,paid,Credit Card,Desktop,DE
+531,38,2025-10-09,returned,PayPal,Desktop,DE
+532,288,2025-08-04,paid,Credit Card,Mobile,DE
+533,75,2025-09-06,paid,Credit Card,Tablet,DE
+534,77,2025-09-11,paid,Credit Card,Desktop,DE
+535,159,2025-09-04,paid,Bank Transfer,Desktop,DE
+536,181,2025-09-01,paid,Credit Card,Desktop,AT
+537,316,2025-10-27,paid,Bank Transfer,Desktop,DE
+538,245,2025-08-31,paid,PayPal,Mobile,DE
+539,4,2025-10-10,paid,PayPal,Desktop,DE
+540,225,2025-10-14,pending,Credit Card,Desktop,DE
+541,106,2025-10-10,paid,Bank Transfer,Desktop,DE
+542,296,2025-09-19,paid,PayPal,Desktop,DE
+543,283,2025-11-21,pending,PayPal,Desktop,DE
+544,182,2025-08-30,paid,Credit Card,Desktop,AT
+545,266,2025-09-29,pending,Credit Card,Mobile,DE
+546,374,2025-09-11,paid,PayPal,Desktop,DE
+547,185,2025-10-23,paid,Credit Card,Tablet,DE
+548,160,2025-10-29,paid,Credit Card,Desktop,DE
+549,346,2025-10-12,paid,PayPal,Mobile,CH
+550,39,2025-09-29,cancelled,PayPal,Mobile,DE
+551,386,2025-08-31,cancelled,Credit Card,Mobile,DE
+552,101,2025-08-28,paid,Credit Card,Desktop,DE
+553,110,2025-10-17,returned,Credit Card,Mobile,DE
+554,314,2025-10-15,paid,Bank Transfer,Tablet,CH
+555,22,2025-10-17,cancelled,Invoice,Mobile,AT
+556,96,2025-09-02,returned,PayPal,Mobile,DE
+557,151,2025-11-04,cancelled,Credit Card,Mobile,AT
+558,149,2025-11-12,paid,Credit Card,Desktop,DE
+559,396,2025-08-16,pending,PayPal,Desktop,DE
+560,46,2025-09-01,cancelled,Bank Transfer,Desktop,AT
+561,44,2025-11-06,paid,Bank Transfer,Mobile,DE
+562,256,2025-10-17,paid,Credit Card,Mobile,DE
+563,273,2025-10-31,paid,Credit Card,Mobile,NL
+564,397,2025-10-23,paid,Credit Card,Desktop,CH
+565,95,2025-08-22,paid,Invoice,Desktop,NL
+566,72,2025-11-27,paid,Credit Card,Desktop,DE
+567,54,2025-10-27,paid,Credit Card,Desktop,DE
+568,20,2025-09-15,paid,Credit Card,Desktop,DE
+569,129,2025-10-20,paid,Bank Transfer,Mobile,DE
+570,112,2025-09-20,paid,PayPal,Mobile,AT
+571,364,2025-10-15,paid,Credit Card,Mobile,DE
+572,243,2025-11-26,pending,Credit Card,Mobile,CH
+573,397,2025-09-29,cancelled,Credit Card,Desktop,CH
+574,365,2025-10-25,paid,Credit Card,Mobile,DE
+575,346,2025-11-20,paid,Credit Card,Desktop,CH
+576,137,2025-08-20,paid,PayPal,Tablet,DE
+577,207,2025-11-03,paid,Credit Card,Desktop,DE
+578,11,2025-09-07,paid,Credit Card,Desktop,DE
+579,372,2025-11-10,paid,Credit Card,Tablet,DE
+580,328,2025-09-28,paid,Bank Transfer,Desktop,DE
+581,359,2025-09-30,pending,PayPal,Mobile,DE
+582,140,2025-09-12,pending,Credit Card,Mobile,DE
+583,208,2025-11-29,pending,PayPal,Desktop,DE
+584,116,2025-11-26,paid,Bank Transfer,Mobile,DE
+585,122,2025-08-11,paid,PayPal,Mobile,DE
+586,28,2025-11-15,pending,Credit Card,Desktop,DE
+587,353,2025-09-05,paid,Credit Card,Desktop,DE
+588,208,2025-11-18,paid,Credit Card,Desktop,DE
+589,217,2025-09-20,paid,PayPal,Mobile,DE
+590,246,2025-11-24,paid,Credit Card,Desktop,CH
+591,7,2025-08-22,paid,Credit Card,Desktop,CH
+592,391,2025-11-20,paid,Credit Card,Desktop,NL
+593,1,2025-11-16,paid,Credit Card,Mobile,AT
+594,218,2025-08-04,paid,PayPal,Mobile,DE
+595,291,2025-08-08,paid,PayPal,Mobile,DE
+596,123,2025-09-12,paid,Bank Transfer,Desktop,NL
+597,16,2025-11-07,paid,Credit Card,Mobile,DE
+598,17,2025-09-08,pending,PayPal,Mobile,DE
+599,132,2025-08-30,paid,Credit Card,Mobile,DE
+600,222,2025-09-05,cancelled,Credit Card,Mobile,CH
+601,257,2025-09-27,pending,Credit Card,Desktop,DE
+602,44,2025-10-11,cancelled,Credit Card,Desktop,DE
+603,254,2025-11-09,paid,Bank Transfer,Desktop,NL
+604,12,2025-11-26,paid,Credit Card,Mobile,CH
+605,332,2025-11-27,paid,PayPal,Desktop,DE
+606,258,2025-09-21,paid,Credit Card,Desktop,CH
+607,135,2025-09-12,paid,PayPal,Mobile,DE
+608,364,2025-09-28,paid,Credit Card,Desktop,DE
+609,196,2025-11-21,paid,Credit Card,Desktop,AT
+610,383,2025-08-06,paid,Credit Card,Desktop,DE
+611,251,2025-08-16,returned,Credit Card,Desktop,DE
+612,179,2025-11-27,paid,Credit Card,Mobile,CH
+613,215,2025-10-08,cancelled,Credit Card,Desktop,CH
+614,295,2025-11-30,paid,Credit Card,Desktop,DE
+615,339,2025-08-10,paid,Credit Card,Desktop,NL
+616,111,2025-09-07,paid,Credit Card,Desktop,DE
+617,122,2025-10-23,paid,Credit Card,Desktop,DE
+618,136,2025-10-26,paid,Invoice,Desktop,DE
+619,334,2025-10-16,paid,Bank Transfer,Mobile,DE
+620,226,2025-09-10,pending,Credit Card,Desktop,DE
+621,266,2025-11-15,paid,Credit Card,Desktop,DE
+622,306,2025-08-12,pending,PayPal,Mobile,AT
+623,334,2025-09-10,paid,Credit Card,Mobile,DE
+624,25,2025-08-18,pending,Credit Card,Desktop,DE
+625,315,2025-09-29,paid,Credit Card,Desktop,DE
+626,160,2025-11-19,paid,PayPal,Mobile,DE
+627,68,2025-09-15,pending,Credit Card,Tablet,AT
+628,6,2025-10-19,pending,Credit Card,Desktop,DE
+629,197,2025-08-25,paid,PayPal,Desktop,DE
+630,301,2025-11-22,paid,PayPal,Desktop,DE
+631,111,2025-11-29,paid,PayPal,Desktop,DE
+632,26,2025-11-18,pending,PayPal,Desktop,NL
+633,193,2025-09-20,paid,PayPal,Desktop,NL
+634,275,2025-10-21,cancelled,Credit Card,Mobile,NL
+635,289,2025-08-19,paid,Credit Card,Desktop,AT
+636,37,2025-08-26,returned,PayPal,Desktop,DE
+637,294,2025-10-16,paid,PayPal,Desktop,DE
+638,28,2025-11-20,cancelled,Invoice,Desktop,DE
+639,214,2025-10-24,paid,Credit Card,Desktop,DE
+640,134,2025-08-23,paid,PayPal,Mobile,NL
+641,352,2025-08-30,pending,Credit Card,Desktop,CH
+642,313,2025-11-11,paid,PayPal,Desktop,DE
+643,371,2025-09-16,paid,Credit Card,Mobile,DE
+644,340,2025-10-30,paid,PayPal,Mobile,CH
+645,287,2025-08-21,paid,PayPal,Desktop,NL
+646,343,2025-08-20,paid,Credit Card,Mobile,DE
+647,25,2025-09-27,paid,Credit Card,Desktop,DE
+648,38,2025-08-06,paid,PayPal,Mobile,DE
+649,373,2025-11-07,paid,Credit Card,Mobile,DE
+650,372,2025-10-27,paid,Bank Transfer,Desktop,DE
+651,126,2025-11-15,paid,Credit Card,Mobile,DE
+652,211,2025-08-25,paid,Bank Transfer,Mobile,DE
+653,336,2025-11-16,cancelled,Credit Card,Desktop,DE
+654,45,2025-08-06,paid,Credit Card,Mobile,DE
+655,39,2025-08-31,paid,Credit Card,Desktop,DE
+656,88,2025-11-24,paid,PayPal,Desktop,CH
+657,168,2025-08-09,paid,Credit Card,Desktop,DE
+658,143,2025-11-07,paid,PayPal,Mobile,DE
+659,79,2025-08-18,returned,PayPal,Desktop,DE
+660,109,2025-10-13,paid,Credit Card,Mobile,DE
+661,191,2025-11-18,paid,Credit Card,Desktop,DE
+662,298,2025-08-13,paid,Credit Card,Desktop,DE
+663,73,2025-09-21,paid,PayPal,Mobile,DE
+664,103,2025-09-09,cancelled,Credit Card,Desktop,NL
+665,179,2025-10-08,cancelled,PayPal,Tablet,CH
+666,236,2025-09-24,paid,PayPal,Mobile,DE
+667,359,2025-10-31,paid,Credit Card,Desktop,DE
+668,82,2025-10-14,paid,PayPal,Desktop,DE
+669,315,2025-09-29,paid,Credit Card,Mobile,DE
+670,216,2025-11-13,paid,PayPal,Mobile,DE
+671,183,2025-08-14,paid,Invoice,Desktop,NL
+672,305,2025-10-28,pending,Credit Card,Mobile,DE
+673,210,2025-10-31,paid,Credit Card,Mobile,AT
+674,173,2025-10-16,returned,PayPal,Desktop,DE
+675,6,2025-08-24,paid,Bank Transfer,Desktop,DE
+676,337,2025-09-15,paid,Credit Card,Desktop,NL
+677,284,2025-08-03,paid,Credit Card,Desktop,DE
+678,176,2025-08-21,paid,Credit Card,Mobile,CH
+679,179,2025-08-20,paid,PayPal,Mobile,CH
+680,109,2025-08-01,paid,Credit Card,Mobile,DE
+681,35,2025-08-03,paid,Credit Card,Mobile,DE
+682,219,2025-10-19,returned,Credit Card,Desktop,DE
+683,331,2025-09-11,paid,Credit Card,Mobile,DE
+684,187,2025-10-20,paid,PayPal,Mobile,DE
+685,372,2025-09-16,paid,PayPal,Mobile,DE
+686,253,2025-09-30,paid,Bank Transfer,Mobile,AT
+687,151,2025-10-21,paid,Bank Transfer,Desktop,AT
+688,70,2025-08-27,paid,PayPal,Desktop,DE
+689,387,2025-10-01,pending,Credit Card,Mobile,CH
+690,352,2025-09-30,paid,Credit Card,Mobile,CH
+691,1,2025-09-03,paid,Credit Card,Desktop,AT
+692,98,2025-10-21,paid,Bank Transfer,Mobile,NL
+693,253,2025-08-25,paid,Invoice,Desktop,AT
+694,209,2025-11-09,paid,PayPal,Desktop,DE
+695,85,2025-09-30,cancelled,Credit Card,Mobile,DE
+696,122,2025-11-21,paid,Credit Card,Desktop,DE
+697,132,2025-10-24,paid,PayPal,Desktop,DE
+698,325,2025-10-08,pending,Credit Card,Desktop,DE
+699,201,2025-10-08,returned,Credit Card,Mobile,DE
+700,342,2025-10-03,paid,PayPal,Mobile,DE
+701,251,2025-11-18,returned,PayPal,Desktop,DE
+702,1,2025-10-27,paid,Credit Card,Desktop,AT
+703,59,2025-09-01,paid,Credit Card,Mobile,DE
+704,188,2025-10-09,paid,Credit Card,Mobile,CH
+705,56,2025-11-21,paid,PayPal,Desktop,DE
+706,229,2025-09-12,paid,Credit Card,Mobile,CH
+707,182,2025-11-23,paid,Credit Card,Desktop,AT
+708,71,2025-11-28,paid,PayPal,Desktop,DE
+709,193,2025-10-07,pending,Bank Transfer,Desktop,NL
+710,334,2025-08-09,paid,Credit Card,Desktop,DE
+711,179,2025-10-09,paid,PayPal,Desktop,CH
+712,65,2025-09-23,paid,Credit Card,Desktop,DE
+713,83,2025-10-25,paid,Credit Card,Desktop,DE
+714,286,2025-11-01,returned,Bank Transfer,Desktop,CH
+715,42,2025-11-06,returned,Credit Card,Mobile,NL
+716,122,2025-08-17,paid,PayPal,Mobile,DE
+717,278,2025-10-06,paid,Credit Card,Desktop,AT
+718,291,2025-11-22,paid,PayPal,Mobile,DE
+719,321,2025-09-20,paid,PayPal,Desktop,DE
+720,379,2025-09-30,paid,Credit Card,Desktop,DE
+721,100,2025-10-13,paid,Credit Card,Mobile,DE
+722,391,2025-09-13,paid,Credit Card,Mobile,NL
+723,206,2025-10-17,paid,PayPal,Mobile,DE
+724,125,2025-10-20,paid,PayPal,Mobile,DE
+725,340,2025-08-01,paid,Credit Card,Desktop,CH
+726,390,2025-09-14,paid,Invoice,Desktop,DE
+727,335,2025-09-13,pending,PayPal,Mobile,DE
+728,55,2025-10-03,paid,PayPal,Mobile,NL
+729,378,2025-11-05,paid,PayPal,Desktop,DE
+730,154,2025-09-04,paid,Credit Card,Desktop,DE
+731,169,2025-09-10,pending,Bank Transfer,Mobile,CH
+732,82,2025-09-12,paid,Credit Card,Desktop,DE
+733,224,2025-08-06,paid,Credit Card,Mobile,DE
+734,228,2025-08-21,paid,Credit Card,Desktop,DE
+735,191,2025-11-19,paid,PayPal,Mobile,DE
+736,41,2025-09-01,paid,PayPal,Desktop,DE
+737,187,2025-11-22,paid,Credit Card,Mobile,DE
+738,13,2025-08-15,paid,Credit Card,Desktop,AT
+739,203,2025-10-13,paid,Credit Card,Desktop,CH
+740,41,2025-09-14,paid,Credit Card,Mobile,DE
+741,216,2025-11-09,returned,Credit Card,Desktop,DE
+742,137,2025-10-07,pending,Credit Card,Tablet,DE
+743,168,2025-09-27,paid,Credit Card,Mobile,DE
+744,152,2025-10-13,paid,Credit Card,Desktop,DE
+745,101,2025-09-14,paid,Credit Card,Mobile,DE
+746,223,2025-08-04,pending,PayPal,Mobile,DE
+747,107,2025-11-16,paid,Credit Card,Desktop,DE
+748,247,2025-08-19,paid,Credit Card,Mobile,DE
+749,174,2025-10-31,paid,PayPal,Desktop,NL
+750,298,2025-08-19,paid,PayPal,Mobile,DE
+751,319,2025-08-03,paid,PayPal,Desktop,CH
+752,308,2025-11-08,pending,PayPal,Mobile,DE
+753,400,2025-08-24,returned,Credit Card,Desktop,DE
+754,266,2025-11-26,paid,Credit Card,Mobile,DE
+755,348,2025-08-06,paid,Credit Card,Mobile,DE
+756,299,2025-08-26,paid,Credit Card,Mobile,DE
+757,301,2025-10-23,paid,Invoice,Mobile,DE
+758,2,2025-08-14,cancelled,Credit Card,Tablet,DE
+759,269,2025-10-17,paid,Credit Card,Desktop,DE
+760,304,2025-11-08,paid,Credit Card,Desktop,AT
+761,205,2025-08-23,paid,Credit Card,Mobile,DE
+762,276,2025-09-28,pending,Credit Card,Mobile,DE
+763,100,2025-10-17,paid,Credit Card,Mobile,DE
+764,134,2025-10-16,returned,Credit Card,Desktop,NL
+765,123,2025-11-26,paid,Credit Card,Desktop,NL
+766,48,2025-08-19,paid,Bank Transfer,Desktop,DE
+767,304,2025-08-07,returned,Credit Card,Desktop,AT
+768,378,2025-10-08,paid,Credit Card,Mobile,DE
+769,93,2025-10-09,paid,Credit Card,Desktop,DE
+770,267,2025-09-07,returned,PayPal,Desktop,DE
+771,14,2025-11-27,paid,Bank Transfer,Mobile,DE
+772,238,2025-09-03,paid,PayPal,Desktop,DE
+773,223,2025-11-23,paid,Credit Card,Desktop,DE
+774,354,2025-11-14,paid,Bank Transfer,Mobile,AT
+775,19,2025-08-02,paid,PayPal,Desktop,NL
+776,125,2025-09-20,paid,Credit Card,Desktop,DE
+777,2,2025-08-08,paid,Credit Card,Mobile,DE
+778,212,2025-11-20,paid,Credit Card,Desktop,DE
+779,14,2025-11-20,paid,Credit Card,Mobile,DE
+780,306,2025-11-02,pending,Bank Transfer,Mobile,AT
+781,129,2025-08-26,paid,Credit Card,Desktop,DE
+782,44,2025-10-13,pending,Credit Card,Mobile,DE
+783,242,2025-09-07,paid,Credit Card,Tablet,DE
+784,248,2025-10-09,paid,Credit Card,Desktop,AT
+785,18,2025-09-25,cancelled,Credit Card,Mobile,AT
+786,298,2025-08-27,paid,PayPal,Desktop,DE
+787,234,2025-08-26,paid,PayPal,Desktop,DE
+788,232,2025-10-26,paid,Credit Card,Desktop,CH
+789,213,2025-08-02,paid,Credit Card,Desktop,DE
+790,291,2025-09-20,paid,PayPal,Desktop,DE
+791,88,2025-10-11,paid,Credit Card,Desktop,CH
+792,177,2025-08-11,returned,PayPal,Mobile,DE
+793,13,2025-09-09,paid,PayPal,Mobile,AT
+794,350,2025-08-19,paid,Credit Card,Desktop,DE
+795,140,2025-08-24,paid,Credit Card,Desktop,DE
+796,112,2025-08-05,paid,Credit Card,Desktop,AT
+797,259,2025-10-29,paid,Credit Card,Mobile,NL
+798,386,2025-10-14,paid,Credit Card,Mobile,DE
+799,258,2025-11-09,paid,Bank Transfer,Desktop,CH
+800,151,2025-09-09,paid,PayPal,Desktop,AT
+801,397,2025-08-05,paid,PayPal,Desktop,CH
+802,366,2025-09-19,returned,Credit Card,Mobile,NL
+803,355,2025-08-15,paid,PayPal,Desktop,DE
+804,11,2025-11-16,paid,Credit Card,Desktop,DE
+805,237,2025-11-17,paid,PayPal,Desktop,DE
+806,123,2025-08-16,paid,Invoice,Mobile,NL
+807,159,2025-09-22,paid,Credit Card,Desktop,DE
+808,256,2025-11-20,paid,Credit Card,Desktop,DE
+809,244,2025-09-23,paid,Credit Card,Tablet,DE
+810,226,2025-10-16,paid,Credit Card,Mobile,DE
+811,75,2025-09-11,paid,PayPal,Desktop,DE
+812,105,2025-10-11,pending,Invoice,Desktop,DE
+813,143,2025-09-07,paid,Credit Card,Desktop,DE
+814,10,2025-08-12,pending,Bank Transfer,Desktop,DE
+815,292,2025-08-25,paid,Credit Card,Mobile,DE
+816,9,2025-09-30,returned,PayPal,Mobile,DE
+817,121,2025-11-27,paid,PayPal,Desktop,DE
+818,255,2025-09-14,paid,Credit Card,Mobile,AT
+819,116,2025-10-08,paid,Credit Card,Mobile,DE
+820,273,2025-11-20,pending,Bank Transfer,Mobile,NL
+821,246,2025-09-08,paid,Credit Card,Mobile,CH
+822,132,2025-09-18,paid,PayPal,Desktop,DE
+823,49,2025-10-27,paid,PayPal,Mobile,DE
+824,367,2025-09-09,paid,Credit Card,Mobile,DE
+825,177,2025-10-29,paid,PayPal,Mobile,DE
+826,195,2025-10-25,paid,Bank Transfer,Tablet,DE
+827,124,2025-09-18,paid,Credit Card,Mobile,NL
+828,44,2025-08-31,paid,Credit Card,Desktop,DE
+829,151,2025-08-28,paid,Credit Card,Mobile,AT
+830,37,2025-10-16,paid,PayPal,Desktop,DE
+831,356,2025-10-23,cancelled,Credit Card,Desktop,DE
+832,117,2025-10-07,paid,PayPal,Desktop,DE
+833,42,2025-09-10,paid,Bank Transfer,Desktop,NL
+834,358,2025-10-30,pending,Credit Card,Desktop,NL
+835,92,2025-11-21,paid,Credit Card,Desktop,AT
+836,265,2025-08-17,cancelled,Credit Card,Desktop,DE
+837,296,2025-09-07,paid,Credit Card,Mobile,DE
+838,141,2025-10-17,paid,PayPal,Mobile,DE
+839,292,2025-11-30,paid,Credit Card,Mobile,DE
+840,71,2025-09-27,paid,Bank Transfer,Desktop,DE
+841,238,2025-10-26,paid,Credit Card,Mobile,DE
+842,5,2025-11-28,paid,Credit Card,Tablet,DE
+843,19,2025-11-05,pending,Credit Card,Mobile,NL
+844,233,2025-09-09,paid,Credit Card,Mobile,DE
+845,55,2025-10-23,paid,Credit Card,Desktop,NL
+846,368,2025-10-26,paid,Credit Card,Desktop,CH
+847,201,2025-10-20,paid,Bank Transfer,Mobile,DE
+848,118,2025-10-02,paid,Bank Transfer,Mobile,NL
+849,283,2025-09-16,paid,PayPal,Mobile,DE
+850,325,2025-09-08,returned,Invoice,Desktop,DE
+851,39,2025-09-05,paid,Credit Card,Desktop,DE
+852,158,2025-10-15,returned,Credit Card,Desktop,NL
+853,152,2025-08-14,paid,Credit Card,Mobile,DE
+854,210,2025-08-17,returned,PayPal,Desktop,AT
+855,129,2025-10-18,paid,Credit Card,Desktop,DE
+856,188,2025-09-04,paid,Credit Card,Mobile,CH
+857,321,2025-10-24,paid,Credit Card,Desktop,DE
+858,315,2025-11-04,paid,Credit Card,Desktop,DE
+859,27,2025-10-31,returned,Credit Card,Mobile,NL
+860,72,2025-09-23,pending,PayPal,Desktop,DE
+861,38,2025-09-28,paid,Bank Transfer,Desktop,DE
+862,255,2025-09-20,pending,Credit Card,Desktop,AT
+863,4,2025-09-08,pending,Credit Card,Desktop,DE
+864,235,2025-10-17,paid,Credit Card,Mobile,DE
+865,166,2025-09-24,paid,Credit Card,Desktop,DE
+866,185,2025-11-03,paid,Credit Card,Desktop,DE
+867,358,2025-08-12,paid,PayPal,Mobile,NL
+868,108,2025-11-30,cancelled,Credit Card,Desktop,DE
+869,252,2025-11-27,paid,Credit Card,Desktop,DE
+870,45,2025-09-27,paid,Credit Card,Mobile,DE
+871,326,2025-09-19,paid,Credit Card,Mobile,DE
+872,342,2025-10-13,paid,Credit Card,Desktop,DE
+873,145,2025-08-07,paid,Bank Transfer,Desktop,DE
+874,88,2025-08-17,paid,PayPal,Mobile,CH
+875,393,2025-10-30,paid,Credit Card,Mobile,DE
+876,152,2025-09-28,paid,Credit Card,Desktop,DE
+877,176,2025-09-23,paid,Credit Card,Desktop,CH
+878,324,2025-09-15,returned,Credit Card,Mobile,DE
+879,232,2025-11-21,paid,PayPal,Desktop,CH
+880,180,2025-10-05,paid,PayPal,Mobile,DE
+881,367,2025-11-15,cancelled,Credit Card,Desktop,DE
+882,216,2025-10-08,paid,Invoice,Desktop,DE
+883,181,2025-11-17,paid,Bank Transfer,Desktop,AT
+884,40,2025-11-26,paid,Credit Card,Desktop,DE
+885,5,2025-10-29,paid,Bank Transfer,Mobile,DE
+886,362,2025-11-24,paid,Credit Card,Desktop,NL
+887,327,2025-11-17,paid,Credit Card,Mobile,DE
+888,226,2025-09-19,paid,PayPal,Desktop,DE
+889,45,2025-08-11,paid,Credit Card,Mobile,DE
+890,166,2025-08-02,returned,PayPal,Desktop,DE
+891,369,2025-11-01,paid,PayPal,Desktop,DE
+892,114,2025-11-19,paid,PayPal,Desktop,DE
+893,293,2025-11-02,paid,Credit Card,Desktop,DE
+894,123,2025-09-17,pending,Credit Card,Desktop,NL
+895,358,2025-09-04,paid,Credit Card,Mobile,NL
+896,315,2025-10-08,paid,Bank Transfer,Mobile,DE
+897,280,2025-09-30,paid,Credit Card,Desktop,DE
+898,128,2025-08-07,paid,Credit Card,Desktop,DE
+899,226,2025-09-22,returned,PayPal,Desktop,DE
+900,393,2025-10-03,paid,PayPal,Desktop,DE
+901,260,2025-08-03,cancelled,PayPal,Mobile,DE
+902,358,2025-09-27,paid,Credit Card,Desktop,NL
+903,102,2025-09-15,paid,Credit Card,Mobile,DE
+904,123,2025-10-04,paid,Credit Card,Desktop,NL
+905,385,2025-08-25,cancelled,PayPal,Desktop,DE
+906,386,2025-10-21,paid,PayPal,Mobile,DE
+907,265,2025-08-02,paid,PayPal,Mobile,DE
+908,114,2025-10-15,paid,Bank Transfer,Desktop,DE
+909,177,2025-08-03,paid,Credit Card,Mobile,DE
+910,346,2025-11-10,paid,Credit Card,Desktop,CH
+911,271,2025-08-16,paid,PayPal,Mobile,DE
+912,351,2025-08-13,paid,Credit Card,Desktop,DE
+913,155,2025-09-07,paid,PayPal,Desktop,CH
+914,217,2025-08-11,paid,Credit Card,Mobile,DE
+915,21,2025-10-11,pending,PayPal,Mobile,DE
+916,276,2025-08-08,returned,Credit Card,Desktop,DE
+917,265,2025-08-15,paid,PayPal,Mobile,DE
+918,292,2025-10-23,paid,Credit Card,Mobile,DE
+919,232,2025-11-01,paid,Credit Card,Mobile,CH
+920,14,2025-11-25,paid,Credit Card,Mobile,DE
+921,216,2025-10-16,paid,PayPal,Mobile,DE
+922,220,2025-10-11,paid,PayPal,Desktop,DE
+923,164,2025-11-13,paid,Credit Card,Mobile,DE
+924,373,2025-08-27,pending,PayPal,Desktop,DE
+925,182,2025-10-06,paid,Credit Card,Mobile,AT
+926,314,2025-11-30,paid,PayPal,Mobile,CH
+927,103,2025-08-24,paid,PayPal,Desktop,NL
+928,385,2025-11-25,paid,PayPal,Desktop,DE
+929,46,2025-09-24,paid,Credit Card,Desktop,AT
+930,333,2025-10-04,paid,Bank Transfer,Tablet,DE
+931,16,2025-09-28,paid,Credit Card,Desktop,DE
+932,249,2025-11-06,paid,PayPal,Desktop,DE
+933,299,2025-10-08,paid,Invoice,Desktop,DE
+934,103,2025-09-10,paid,PayPal,Desktop,NL
+935,259,2025-10-15,paid,Bank Transfer,Desktop,NL
+936,79,2025-08-02,pending,Credit Card,Tablet,DE
+937,117,2025-09-05,paid,Credit Card,Desktop,DE
+938,35,2025-11-20,cancelled,Credit Card,Mobile,DE
+939,80,2025-09-27,paid,Credit Card,Desktop,DE
+940,216,2025-11-15,paid,PayPal,Mobile,DE
+941,68,2025-09-05,paid,Credit Card,Desktop,AT
+942,22,2025-10-05,paid,PayPal,Mobile,AT
+943,39,2025-08-29,paid,Credit Card,Mobile,DE
+944,159,2025-11-23,returned,Invoice,Desktop,DE
+945,244,2025-09-17,paid,Invoice,Tablet,DE
+946,359,2025-09-27,paid,PayPal,Desktop,DE
+947,211,2025-11-09,cancelled,Credit Card,Desktop,DE
+948,270,2025-11-27,paid,PayPal,Desktop,DE
+949,32,2025-10-13,pending,Invoice,Desktop,DE
+950,100,2025-08-18,paid,Bank Transfer,Mobile,DE
+951,143,2025-08-06,paid,Credit Card,Desktop,DE
+952,82,2025-11-22,paid,PayPal,Desktop,DE
+953,270,2025-08-03,paid,PayPal,Desktop,DE
+954,362,2025-10-21,pending,Credit Card,Desktop,NL
+955,313,2025-11-10,paid,Credit Card,Mobile,DE
+956,52,2025-09-06,paid,PayPal,Mobile,DE
+957,69,2025-08-31,paid,Credit Card,Mobile,CH
+958,67,2025-08-30,paid,PayPal,Desktop,DE
+959,253,2025-08-30,paid,Credit Card,Desktop,AT
+960,68,2025-08-25,paid,Bank Transfer,Desktop,AT
+961,393,2025-08-02,paid,Credit Card,Desktop,DE
+962,47,2025-08-02,paid,Credit Card,Desktop,CH
+963,106,2025-09-13,paid,Invoice,Desktop,DE
+964,162,2025-11-09,paid,Credit Card,Mobile,DE
+965,323,2025-08-13,paid,PayPal,Mobile,DE
+966,198,2025-09-12,paid,Bank Transfer,Mobile,NL
+967,11,2025-11-11,pending,Credit Card,Mobile,DE
+968,46,2025-09-13,returned,Credit Card,Desktop,AT
+969,255,2025-08-30,paid,Credit Card,Tablet,AT
+970,276,2025-11-12,returned,Credit Card,Mobile,DE
+971,328,2025-10-22,paid,Credit Card,Mobile,DE
+972,190,2025-10-22,paid,Credit Card,Desktop,DE
+973,169,2025-09-02,paid,PayPal,Desktop,CH
+974,279,2025-08-07,paid,Credit Card,Desktop,NL
+975,220,2025-11-25,cancelled,Credit Card,Desktop,DE
+976,269,2025-08-28,paid,Credit Card,Desktop,DE
+977,242,2025-11-25,paid,Credit Card,Tablet,DE
+978,154,2025-09-17,paid,PayPal,Mobile,DE
+979,46,2025-09-19,paid,PayPal,Mobile,AT
+980,72,2025-10-31,paid,Credit Card,Desktop,DE
+981,70,2025-10-17,paid,Invoice,Mobile,DE
+982,99,2025-08-14,paid,Credit Card,Desktop,CH
+983,89,2025-08-13,paid,Credit Card,Desktop,DE
+984,9,2025-10-18,paid,Bank Transfer,Mobile,DE
+985,186,2025-09-03,paid,Credit Card,Desktop,NL
+986,326,2025-11-27,paid,PayPal,Desktop,DE
+987,103,2025-10-12,paid,PayPal,Desktop,NL
+988,94,2025-10-07,cancelled,PayPal,Mobile,DE
+989,210,2025-08-12,paid,Credit Card,Desktop,AT
+990,24,2025-11-07,paid,Invoice,Mobile,CH
+991,29,2025-09-04,paid,Credit Card,Desktop,NL
+992,299,2025-10-19,returned,Invoice,Desktop,DE
+993,258,2025-08-24,paid,PayPal,Mobile,CH
+994,282,2025-08-29,paid,PayPal,Mobile,DE
+995,321,2025-09-22,paid,Credit Card,Desktop,DE
+996,87,2025-08-21,cancelled,Credit Card,Mobile,DE
+997,198,2025-11-27,cancelled,Credit Card,Mobile,NL
+998,127,2025-09-09,paid,Credit Card,Mobile,CH
+999,248,2025-09-15,cancelled,Bank Transfer,Desktop,AT
+1000,267,2025-10-08,paid,Credit Card,Mobile,DE
+1001,161,2025-09-08,paid,Credit Card,Tablet,AT
+1002,31,2025-08-11,paid,Credit Card,Mobile,DE
+1003,227,2025-08-02,paid,PayPal,Desktop,NL
+1004,341,2025-11-01,paid,PayPal,Mobile,NL
+1005,25,2025-08-02,cancelled,Credit Card,Desktop,DE
+1006,323,2025-11-05,paid,Bank Transfer,Desktop,DE
+1007,48,2025-08-25,paid,PayPal,Mobile,DE
+1008,278,2025-11-11,paid,PayPal,Mobile,AT
+1009,309,2025-10-23,paid,Credit Card,Mobile,DE
+1010,200,2025-10-27,paid,Credit Card,Desktop,DE
+1011,332,2025-10-16,returned,Bank Transfer,Desktop,DE
+1012,254,2025-10-27,paid,Credit Card,Desktop,NL
+1013,384,2025-09-19,paid,Credit Card,Mobile,NL
+1014,292,2025-11-21,paid,Credit Card,Mobile,DE
+1015,280,2025-10-21,paid,Bank Transfer,Mobile,DE
+1016,60,2025-09-24,paid,Credit Card,Mobile,DE
+1017,151,2025-11-25,paid,Credit Card,Mobile,AT
+1018,279,2025-09-26,paid,Credit Card,Mobile,NL
+1019,158,2025-08-19,cancelled,Credit Card,Mobile,NL
+1020,238,2025-09-02,returned,Credit Card,Desktop,DE
+1021,189,2025-09-23,paid,Credit Card,Mobile,NL
+1022,101,2025-09-03,paid,Credit Card,Desktop,DE
+1023,341,2025-08-11,paid,Credit Card,Desktop,NL
+1024,383,2025-11-21,paid,Credit Card,Mobile,DE
+1025,12,2025-09-04,paid,Invoice,Desktop,CH
+1026,273,2025-09-01,paid,Credit Card,Mobile,NL
+1027,66,2025-08-09,paid,Credit Card,Desktop,DE
+1028,103,2025-11-05,paid,Bank Transfer,Mobile,NL
+1029,237,2025-08-26,cancelled,PayPal,Desktop,DE
+1030,255,2025-11-30,paid,Credit Card,Desktop,AT
+1031,224,2025-08-17,paid,Credit Card,Desktop,DE
+1032,24,2025-11-17,paid,PayPal,Desktop,CH
+1033,116,2025-10-21,paid,Bank Transfer,Desktop,DE
+1034,227,2025-10-03,paid,PayPal,Mobile,NL
+1035,53,2025-10-31,paid,Invoice,Mobile,DE
+1036,100,2025-11-02,paid,Credit Card,Desktop,DE
+1037,101,2025-09-06,cancelled,Credit Card,Desktop,DE
+1038,130,2025-10-23,paid,Credit Card,Mobile,DE
+1039,279,2025-09-28,cancelled,Credit Card,Desktop,NL
+1040,123,2025-08-08,returned,PayPal,Desktop,NL
+1041,50,2025-08-14,paid,PayPal,Mobile,DE
+1042,191,2025-11-16,paid,Credit Card,Desktop,DE
+1043,75,2025-09-08,paid,PayPal,Tablet,DE
+1044,48,2025-10-25,paid,Bank Transfer,Desktop,DE
+1045,151,2025-08-13,returned,Credit Card,Desktop,AT
+1046,121,2025-11-23,paid,PayPal,Desktop,DE
+1047,243,2025-11-21,paid,PayPal,Mobile,CH
+1048,214,2025-10-17,paid,Credit Card,Desktop,DE
+1049,258,2025-08-15,paid,Credit Card,Desktop,CH
+1050,156,2025-08-14,paid,PayPal,Mobile,CH
+1051,371,2025-10-27,paid,Credit Card,Mobile,DE
+1052,280,2025-11-10,cancelled,Bank Transfer,Mobile,DE
+1053,246,2025-08-24,paid,PayPal,Desktop,CH
+1054,156,2025-11-12,paid,Credit Card,Mobile,CH
+1055,234,2025-09-04,cancelled,Bank Transfer,Desktop,DE
+1056,206,2025-10-21,cancelled,PayPal,Mobile,DE
+1057,309,2025-10-11,paid,Bank Transfer,Desktop,DE
+1058,354,2025-08-30,paid,PayPal,Desktop,AT
+1059,293,2025-11-06,paid,Credit Card,Mobile,DE
+1060,359,2025-10-31,paid,Credit Card,Tablet,DE
+1061,364,2025-11-20,paid,Credit Card,Desktop,DE
+1062,364,2025-11-03,paid,Invoice,Desktop,DE
+1063,380,2025-08-11,paid,Credit Card,Mobile,DE
+1064,366,2025-09-03,paid,PayPal,Mobile,NL
+1065,210,2025-09-10,paid,PayPal,Mobile,AT
+1066,108,2025-08-25,paid,Credit Card,Desktop,DE
+1067,104,2025-10-13,paid,Credit Card,Mobile,AT
+1068,213,2025-11-19,pending,Bank Transfer,Desktop,DE
+1069,22,2025-08-03,paid,Credit Card,Mobile,AT
+1070,204,2025-09-23,returned,Credit Card,Mobile,DE
+1071,379,2025-11-02,paid,PayPal,Desktop,DE
+1072,202,2025-11-06,pending,PayPal,Mobile,DE
+1073,353,2025-11-19,returned,Credit Card,Mobile,DE
+1074,155,2025-08-01,paid,Credit Card,Mobile,CH
+1075,197,2025-08-17,paid,Invoice,Desktop,DE
+1076,376,2025-10-26,paid,Invoice,Desktop,DE
+1077,84,2025-11-22,returned,Credit Card,Desktop,DE
+1078,152,2025-11-06,paid,PayPal,Desktop,DE
+1079,235,2025-09-04,cancelled,Credit Card,Desktop,DE
+1080,219,2025-10-31,paid,Credit Card,Mobile,DE
+1081,273,2025-09-02,paid,PayPal,Desktop,NL
+1082,9,2025-09-02,pending,PayPal,Mobile,DE
+1083,341,2025-10-08,paid,PayPal,Mobile,NL
+1084,65,2025-08-20,paid,Credit Card,Desktop,DE
+1085,369,2025-11-13,paid,Credit Card,Desktop,DE
+1086,177,2025-10-28,paid,Credit Card,Mobile,DE
+1087,218,2025-10-17,paid,Credit Card,Desktop,DE
+1088,388,2025-08-30,paid,Credit Card,Mobile,DE
+1089,358,2025-11-15,cancelled,PayPal,Mobile,NL
+1090,331,2025-09-25,paid,PayPal,Desktop,DE
+1091,396,2025-08-07,paid,PayPal,Mobile,DE
+1092,240,2025-10-29,paid,Credit Card,Mobile,DE
+1093,375,2025-09-05,returned,Bank Transfer,Mobile,DE
+1094,93,2025-11-22,paid,Credit Card,Desktop,DE
+1095,33,2025-08-20,pending,PayPal,Desktop,DE
+1096,224,2025-11-20,paid,Credit Card,Mobile,DE
+1097,109,2025-08-31,pending,Credit Card,Desktop,DE
+1098,141,2025-08-28,paid,PayPal,Mobile,DE
+1099,327,2025-09-07,paid,Invoice,Desktop,DE
+1100,119,2025-11-22,paid,PayPal,Mobile,DE
+1101,289,2025-11-18,paid,Credit Card,Mobile,AT
+1102,155,2025-11-20,paid,Bank Transfer,Desktop,CH
+1103,64,2025-11-01,paid,Invoice,Mobile,AT
+1104,376,2025-11-28,paid,Credit Card,Desktop,DE
+1105,100,2025-10-29,paid,Credit Card,Desktop,DE
+1106,79,2025-10-12,paid,Bank Transfer,Mobile,DE
+1107,103,2025-08-18,cancelled,Credit Card,Mobile,NL
+1108,116,2025-09-04,paid,PayPal,Desktop,DE
+1109,210,2025-08-16,cancelled,Credit Card,Mobile,AT
+1110,86,2025-08-31,pending,Bank Transfer,Mobile,DE
+1111,92,2025-10-09,paid,PayPal,Desktop,AT
+1112,187,2025-11-01,paid,Credit Card,Desktop,DE
+1113,379,2025-08-20,paid,PayPal,Mobile,DE
+1114,331,2025-11-26,paid,Credit Card,Mobile,DE
+1115,34,2025-11-22,pending,Credit Card,Desktop,NL
+1116,46,2025-09-25,paid,PayPal,Desktop,AT
+1117,212,2025-09-03,pending,PayPal,Mobile,DE
+1118,315,2025-08-10,paid,PayPal,Mobile,DE
+1119,219,2025-09-28,paid,Bank Transfer,Mobile,DE
+1120,160,2025-08-10,paid,PayPal,Mobile,DE
+1121,175,2025-09-03,cancelled,PayPal,Mobile,DE
+1122,204,2025-10-24,paid,PayPal,Desktop,DE
+1123,320,2025-10-22,pending,Credit Card,Desktop,NL
+1124,180,2025-09-17,returned,Credit Card,Desktop,DE
+1125,237,2025-08-10,paid,Credit Card,Desktop,DE
+1126,277,2025-09-06,returned,Credit Card,Desktop,DE
+1127,234,2025-10-20,pending,PayPal,Tablet,DE
+1128,280,2025-08-11,paid,PayPal,Desktop,DE
+1129,220,2025-09-26,paid,Credit Card,Mobile,DE
+1130,344,2025-10-19,returned,Credit Card,Desktop,AT
+1131,128,2025-10-01,returned,PayPal,Tablet,DE
+1132,75,2025-09-03,paid,Credit Card,Mobile,DE
+1133,16,2025-09-08,paid,Invoice,Desktop,DE
+1134,19,2025-10-10,paid,PayPal,Mobile,NL
+1135,203,2025-10-27,paid,Credit Card,Mobile,CH
+1136,326,2025-11-15,returned,Credit Card,Mobile,DE
+1137,186,2025-10-09,cancelled,Invoice,Desktop,NL
+1138,153,2025-11-05,paid,Credit Card,Desktop,DE
+1139,92,2025-08-11,paid,Credit Card,Mobile,AT
+1140,52,2025-10-06,cancelled,PayPal,Desktop,DE
+1141,366,2025-11-01,paid,Bank Transfer,Mobile,NL
+1142,153,2025-08-02,paid,Credit Card,Desktop,DE
+1143,149,2025-10-16,paid,Credit Card,Mobile,DE
+1144,167,2025-10-23,paid,Credit Card,Mobile,NL
+1145,46,2025-08-16,cancelled,Credit Card,Desktop,AT
+1146,8,2025-10-27,paid,PayPal,Mobile,NL
+1147,86,2025-10-13,paid,Credit Card,Desktop,DE
+1148,289,2025-08-05,paid,PayPal,Desktop,AT
+1149,152,2025-10-06,paid,Bank Transfer,Mobile,DE
+1150,48,2025-10-02,paid,Credit Card,Mobile,DE
+1151,296,2025-09-18,paid,Bank Transfer,Desktop,DE
+1152,185,2025-11-29,paid,Credit Card,Mobile,DE
+1153,356,2025-10-27,cancelled,Credit Card,Desktop,DE
+1154,249,2025-11-17,paid,PayPal,Mobile,DE
+1155,361,2025-10-27,paid,Credit Card,Desktop,DE
+1156,216,2025-09-17,paid,PayPal,Mobile,DE
+1157,193,2025-09-29,pending,Credit Card,Desktop,NL
+1158,268,2025-09-11,paid,Credit Card,Mobile,DE
+1159,287,2025-09-02,pending,Bank Transfer,Desktop,NL
+1160,201,2025-08-31,paid,Credit Card,Desktop,DE
+1161,230,2025-08-15,cancelled,Credit Card,Mobile,AT
+1162,319,2025-10-14,paid,Bank Transfer,Mobile,CH
+1163,303,2025-09-26,returned,Credit Card,Mobile,DE
+1164,372,2025-11-13,paid,Credit Card,Desktop,DE
+1165,154,2025-10-10,paid,Credit Card,Desktop,DE
+1166,290,2025-11-28,paid,Credit Card,Mobile,DE
+1167,149,2025-10-27,paid,Bank Transfer,Desktop,DE
+1168,129,2025-08-30,paid,PayPal,Mobile,DE
+1169,203,2025-08-24,returned,PayPal,Mobile,CH
+1170,205,2025-08-24,returned,Credit Card,Desktop,DE
+1171,321,2025-11-21,cancelled,Credit Card,Mobile,DE
+1172,337,2025-09-27,paid,Credit Card,Mobile,NL
+1173,387,2025-11-24,cancelled,PayPal,Desktop,CH
+1174,42,2025-11-02,paid,Credit Card,Mobile,NL
+1175,385,2025-09-25,paid,Credit Card,Desktop,DE
+1176,376,2025-11-11,paid,Credit Card,Desktop,DE
+1177,110,2025-09-18,cancelled,Credit Card,Desktop,DE
+1178,380,2025-09-09,paid,Credit Card,Desktop,DE
+1179,146,2025-10-15,paid,Credit Card,Desktop,DE
+1180,48,2025-11-19,paid,Credit Card,Mobile,DE
+1181,37,2025-11-11,cancelled,Credit Card,Mobile,DE
+1182,218,2025-10-25,paid,Credit Card,Tablet,DE
+1183,286,2025-11-19,paid,Credit Card,Mobile,CH
+1184,132,2025-09-06,paid,Bank Transfer,Desktop,DE
+1185,344,2025-10-05,paid,PayPal,Mobile,AT
+1186,35,2025-11-29,returned,PayPal,Mobile,DE
+1187,393,2025-09-29,paid,Invoice,Mobile,DE
+1188,320,2025-09-10,paid,Credit Card,Tablet,NL
+1189,105,2025-08-06,paid,Invoice,Desktop,DE
+1190,305,2025-11-05,paid,Credit Card,Desktop,DE
+1191,169,2025-10-01,pending,Invoice,Desktop,CH
+1192,335,2025-08-08,paid,Credit Card,Mobile,DE
+1193,208,2025-10-25,paid,PayPal,Desktop,DE
+1194,101,2025-08-29,paid,PayPal,Desktop,DE
+1195,257,2025-09-08,paid,PayPal,Desktop,DE
+1196,138,2025-10-26,pending,PayPal,Mobile,DE
+1197,354,2025-11-11,cancelled,Credit Card,Desktop,AT
+1198,1,2025-08-05,paid,Credit Card,Tablet,AT
+1199,109,2025-11-15,paid,Credit Card,Mobile,DE
+1200,284,2025-09-11,paid,Credit Card,Mobile,DE
