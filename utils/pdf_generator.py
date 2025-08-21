@@ -140,53 +140,52 @@ class ReportPDFGenerator:
         story.append(status_table)
         story.append(Spacer(1, 30))
         
-        # Simulierte Analyse-Ergebnisse (da wir die echten Daten nicht haben)
-        story.append(Paragraph("📊 Analyse-Ergebnisse", self.styles['CustomSubtitle']))
+        # Echte Analyse-Ergebnisse aus dem LangGraph-Workflow verwenden
+        story.append(Paragraph("📊 Analyseergebnis", self.styles['CustomSubtitle']))
         
-        # KPIs
-        kpi_text = """
-        <b>Wichtigste KPIs:</b><br/>
-        • <b>Gesamtumsatz:</b> 782.517,00 €<br/>
-        • <b>Average Order Value (AOV):</b> 863,71 €<br/>
-        • <b>Anzahl Bestellungen:</b> 906<br/>
-        • <b>Gross Margin:</b> 42,84%<br/>
-        • <b>Aktive Kanäle:</b> 6
-        """
-        story.append(Paragraph(kpi_text, self.styles['KPIStyle']))
+        # Echten Bericht aus workflow_data extrahieren
+        final_output = workflow_data.get('final_result', '')
+        if not final_output:
+            # Fallback: Versuche andere Felder
+            final_output = workflow_data.get('final_output', '')
+        if not final_output:
+            final_output = "Keine Analyseergebnisse verfügbar. Workflow-Daten: " + str(list(workflow_data.keys()))
+        
+        # Bericht-Text formatieren und in PDF einfügen
+        # Sichere Formatierung für ReportLab
+        import re
+        
+        # Entferne/ersetze problematische Zeichen
+        formatted_output = final_output.replace('\\U0001f4ca', '📊')
+        formatted_output = formatted_output.replace('\\U0001f3af', '🎯')
+        formatted_output = formatted_output.replace('\\U0001f4c8', '📈')
+        formatted_output = formatted_output.replace('\\U0001f4dd', '📝')
+        formatted_output = formatted_output.replace('\\xe4', 'ä')
+        formatted_output = formatted_output.replace('\\xf6', 'ö')
+        formatted_output = formatted_output.replace('\\xfc', 'ü')
+        formatted_output = formatted_output.replace('\\xdf', 'ß')
+        
+        # Markdown **bold** korrekt zu HTML konvertieren
+        formatted_output = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', formatted_output)
+        
+        # Zeilenumbrüche
+        formatted_output = formatted_output.replace('\n\n', '<br/><br/>')
+        formatted_output = formatted_output.replace('\n', '<br/>')
+        
+        # Entferne HTML-Tabellen (nicht unterstützt von ReportLab)
+        formatted_output = re.sub(r'\|.*?\|', '', formatted_output)
+        formatted_output = re.sub(r'-+\s*\|\s*-+', '', formatted_output)
+        
+        story.append(Paragraph(formatted_output, self.styles['CustomBody']))
         story.append(Spacer(1, 20))
         
-        # Executive Summary
-        story.append(Paragraph("📝 Executive Summary", self.styles['CustomSubtitle']))
-        
-        executive_summary = """
-        Die Analyse der E-Commerce-Daten zeigt eine solide Geschäftsleistung mit einem Gesamtumsatz 
-        von 782.517,00 € und einem durchschnittlichen Bestellwert von 863,71 €. Diese Kennzahlen 
-        deuten auf eine gesunde Kundenbasis und effektive Verkaufsstrategien hin.
-        
-        Der organische Kanal erweist sich als stärkster Akquisitionskanal, was die Bedeutung einer 
-        guten SEO-Strategie unterstreicht. Die Bruttomarge von 42,84% zeigt, dass das Unternehmen 
-        profitabel arbeitet und Spielraum für weitere Investitionen hat.
-        """
-        story.append(Paragraph(executive_summary, self.styles['CustomBody']))
-        story.append(Spacer(1, 20))
-        
-        # Handlungsempfehlungen
-        story.append(Paragraph("💡 Handlungsempfehlungen", self.styles['CustomSubtitle']))
-        
-        recommendations = """
-        <b>1. Organische Reichweite stärken:</b> Investieren Sie weiter in SEO-Maßnahmen, 
-        um die bereits starke organische Performance zu maximieren.<br/><br/>
-        
-        <b>2. Paid Social optimieren:</b> Analysieren Sie die Performance der Social Media 
-        Kampagnen und testen Sie neue Zielgruppenansprachen.<br/><br/>
-        
-        <b>3. Referral-Programm ausbauen:</b> Entwickeln Sie Anreize für bestehende Kunden, 
-        um neue Kunden zu werben und den schwächsten Kanal zu stärken.<br/><br/>
-        
-        <b>4. AOV weiter steigern:</b> Implementieren Sie Cross-Selling und Upselling 
-        Strategien, um den bereits hohen Bestellwert weiter zu erhöhen.
-        """
-        story.append(Paragraph(recommendations, self.styles['CustomBody']))
+        # Zusätzliche Informationen nur wenn verfügbar
+        analysis_result = workflow_data.get('analysis_result', {})
+        if analysis_result:
+            story.append(Paragraph("📈 Zusätzliche Details", self.styles['CustomSubtitle']))
+            details_text = f"Analyse-Status: {analysis_result.get('status', 'Unbekannt')}"
+            story.append(Paragraph(details_text, self.styles['CustomBody']))
+            story.append(Spacer(1, 10))
         
         # Footer
         story.append(Spacer(1, 30))

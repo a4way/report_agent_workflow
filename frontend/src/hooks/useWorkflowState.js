@@ -13,6 +13,7 @@ export const useWorkflowState = () => {
   const [logs, setLogs] = useState([]);
   const [isRunning, setIsRunning] = useState(false);
   const [currentWorkflowId, setCurrentWorkflowId] = useState(null);
+  const [finalResult, setFinalResult] = useState('');
   const abortControllerRef = useRef(null);
 
   const addLog = useCallback((level, message, agent = null, details = null) => {
@@ -34,94 +35,75 @@ export const useWorkflowState = () => {
     }));
   }, []);
 
-  const simulateWorkflowProgress = useCallback(async (query, demoId) => {
-    // Reset state
-    setWorkflowStatus({
-      orchestrator: 'idle',
-      dataAnalyst: 'idle', 
-      duckdbTool: 'idle',
-      reportGenerator: 'idle'
-    });
-    
-    setCurrentStep('');
-    setIsRunning(true);
-    
-    addLog('info', `🚀 Starte Demo: ${demoId}`, 'System');
-    addLog('info', `📝 Query: "${query}"`, 'System');
-
+  const pollBackendWorkflowProgress = useCallback(async (workflowId) => {
     try {
-      // Step 1: Orchestrator starts
-      setCurrentStep('Orchestrator initialisiert Workflow...');
-      updateWorkflowStatus('orchestrator', 'active');
-      addLog('info', '🎯 Orchestrator: Anfrage wird klassifiziert', 'Orchestrator');
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      let isCompleted = false;
+      let pollCount = 0;
+      const maxPolls = 60; // 60 seconds max
       
-      updateWorkflowStatus('orchestrator', 'completed');
-      addLog('success', '✅ Orchestrator: Anfrage erfolgreich klassifiziert', 'Orchestrator');
+      while (!isCompleted && pollCount < maxPolls && !abortControllerRef.current?.signal.aborted) {
+        // Poll backend for status and logs
+        const [statusResponse, logsResponse] = await Promise.all([
+          axios.get(`/api/workflow/${workflowId}/status`, {
+            signal: abortControllerRef.current?.signal
+          }),
+          axios.get(`/api/workflow/${workflowId}/logs`, {
+            signal: abortControllerRef.current?.signal
+          })
+        ]);
 
-      // Step 2: Data Analyst starts
-      setCurrentStep('Datenanalyse-Agent startet Analyse...');
-      updateWorkflowStatus('dataAnalyst', 'active');
-      addLog('info', '📊 Datenanalyse-Agent: Beginne mit der Datenanalyse', 'DataAnalyst');
-      await new Promise(resolve => setTimeout(resolve, 1500));
+        const workflowData = statusResponse.data;
+        const logsData = logsResponse.data;
+        
+        // Update UI state based on real backend status
+        if (workflowData.workflow_status) {
+          setWorkflowStatus(workflowData.workflow_status);
+        }
+        if (workflowData.current_step) {
+          setCurrentStep(workflowData.current_step);
+        }
 
-      // Step 3: DuckDB Tool executes queries
-      setCurrentStep('DuckDB Tool führt SQL-Queries aus...');
-      updateWorkflowStatus('duckdbTool', 'active');
-      addLog('info', '🔧 DuckDB Tool: Führe SQL-Queries auf CSV-Daten aus', 'DuckDBTool');
-      
-      // Simulate multiple queries
-      const queries = [
-        'SELECT SUM(revenue) FROM orders WHERE status = "paid"',
-        'SELECT channel, COUNT(*) FROM customers GROUP BY channel',
-        'SELECT AVG(order_value) FROM order_items'
-      ];
-      
-      for (const query of queries) {
-        addLog('info', `🔍 SQL Query: ${query}`, 'DuckDBTool');
-        await new Promise(resolve => setTimeout(resolve, 800));
+        // Update logs with real backend logs
+        if (logsData.logs && logsData.logs.length > 0) {
+          setLogs(logsData.logs);
+        }
+
+        // Update final result if available
+        if (workflowData.final_result) {
+          setFinalResult(workflowData.final_result);
+        }
+
+        // Check if workflow is completed
+        if (workflowData.status === 'completed') {
+          isCompleted = true;
+          setIsRunning(false);
+          addLog('success', '🎉 LangGraph-Analyse erfolgreich abgeschlossen!', 'System');
+        } else if (workflowData.status === 'failed') {
+          isCompleted = true;
+          setIsRunning(false);
+          addLog('error', '❌ Workflow fehlgeschlagen', 'System');
+        }
+
+        // Wait before next poll (if not completed)
+        if (!isCompleted) {
+          await new Promise(resolve => setTimeout(resolve, 1000)); // Poll every second
+          pollCount++;
+        }
       }
       
-      updateWorkflowStatus('duckdbTool', 'completed');
-      addLog('success', '✅ DuckDB Tool: Alle Queries erfolgreich ausgeführt', 'DuckDBTool');
-
-      // Step 4: Data Analyst completes analysis
-      setCurrentStep('Datenanalyse-Agent berechnet KPIs...');
-      addLog('info', '📈 Datenanalyse-Agent: Berechne KPIs und erstelle Insights', 'DataAnalyst');
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      if (pollCount >= maxPolls) {
+        addLog('warning', '⚠️ Workflow-Polling Timeout erreicht', 'System');
+        setIsRunning(false);
+      }
       
-      updateWorkflowStatus('dataAnalyst', 'completed');
-      addLog('success', '✅ Datenanalyse-Agent: KPIs erfolgreich berechnet', 'DataAnalyst', {
-        revenue: '782,517.00 €',
-        aov: '863.71 €',
-        orders: '906',
-        channels: 6
-      });
-
-      // Step 5: Report Generator starts
-      setCurrentStep('Bericht-Generator erstellt professionellen Bericht...');
-      updateWorkflowStatus('reportGenerator', 'active');
-      addLog('info', '📝 Bericht-Generator: Erstelle professionellen Fließtext-Bericht', 'ReportGenerator');
-      await new Promise(resolve => setTimeout(resolve, 2500));
-      
-      updateWorkflowStatus('reportGenerator', 'completed');
-      addLog('success', '✅ Bericht-Generator: Bericht erfolgreich erstellt', 'ReportGenerator', {
-        wordCount: 377,
-        sections: ['Executive Summary', 'Wichtigste Erkenntnisse', 'Handlungsempfehlungen']
-      });
-
-      // Final step
-      setCurrentStep('Workflow abgeschlossen!');
-      addLog('success', '🎉 Workflow erfolgreich abgeschlossen!', 'System');
-      addLog('info', '📋 Vollständiger Bericht mit KPIs und Handlungsempfehlungen wurde generiert', 'System');
-
     } catch (error) {
-      addLog('error', `❌ Fehler im Workflow: ${error.message}`, 'System');
-      setCurrentStep('Fehler aufgetreten');
-    } finally {
-      setIsRunning(false);
+      if (error.name !== 'CanceledError') {
+        console.error('Fehler beim Backend-Polling:', error);
+        addLog('error', `❌ Fehler beim Abrufen der Workflow-Daten: ${error.message}`, 'System');
+        setIsRunning(false);
+      }
     }
-  }, [addLog, updateWorkflowStatus]);
+  }, []);
 
   const startDemo = useCallback(async (query, demoId) => {
     if (isRunning) return;
@@ -137,29 +119,25 @@ export const useWorkflowState = () => {
         demoId
       }, {
         timeout: 5000,
-        signal: abortControllerRef.current.signal
+        signal: abortControllerRef.current?.signal
       });
-      
+
       if (response.data.success) {
         const workflowId = response.data.workflowId; // Backend sendet camelCase!
         setCurrentWorkflowId(workflowId);
         console.log('🔍 Backend Workflow ID gesetzt:', workflowId);
         addLog('success', '✅ Backend-API erfolgreich erreicht', 'System');
-        // Handle real backend response here
-        // For now, we'll still use simulation
-        await simulateWorkflowProgress(query, demoId);
+        // Handle real backend response - poll for real logs
+        await pollBackendWorkflowProgress(workflowId);
       }
     } catch (error) {
       if (error.name !== 'CanceledError') {
-        addLog('warning', '⚠️ Backend nicht erreichbar - verwende Demo-Simulation', 'System');
-        // Generate a mock workflow ID for simulation
-        const mockWorkflowId = `workflow_${Date.now()}`;
-        setCurrentWorkflowId(mockWorkflowId);
-        console.log('🔍 Mock Workflow ID gesetzt:', mockWorkflowId);
-        await simulateWorkflowProgress(query, demoId);
+        addLog('error', '❌ Backend nicht erreichbar - kann keine Analyse durchführen', 'System');
+        addLog('error', '🔧 Bitte stelle sicher, dass das Backend läuft: python3 web_api.py', 'System');
+        setIsRunning(false);
       }
     }
-  }, [isRunning, simulateWorkflowProgress, addLog]);
+  }, [isRunning, addLog]);
 
   const clearLogs = useCallback(() => {
     setLogs([]);
@@ -187,6 +165,7 @@ export const useWorkflowState = () => {
     logs,
     isRunning,
     currentWorkflowId,
+    finalResult,
     startDemo,
     stopWorkflow,
     clearLogs
