@@ -53,7 +53,7 @@ const DemoCases = ({ onStartDemo, isRunning }) => {
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-1">
+      <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-3">
         {demoCases.map((demoCase) => {
           const Icon = demoCase.icon;
           const isSelected = selectedDemo === demoCase.id;

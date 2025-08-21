@@ -13,7 +13,6 @@ import {
   FileText, 
   CheckCircle2, 
   Clock, 
-  AlertCircle,
   Zap
 } from 'lucide-react';
 
@@ -128,7 +127,7 @@ const WorkflowGraph = ({ workflowStatus, currentStep }) => {
     {
       id: 'orchestrator',
       type: 'orchestrator',
-      position: { x: 400, y: 50 },
+      position: { x: 300, y: 50 },
       data: {
         label: '🎯 Orchestrator',
         description: 'Koordiniert den Workflow',
@@ -138,7 +137,7 @@ const WorkflowGraph = ({ workflowStatus, currentStep }) => {
     {
       id: 'dataAnalyst',
       type: 'dataAnalyst',
-      position: { x: 150, y: 200 },
+      position: { x: 100, y: 200 },
       data: {
         label: '📊 Datenanalyse-Agent',
         description: 'Berechnet KPIs und analysiert',
@@ -148,7 +147,7 @@ const WorkflowGraph = ({ workflowStatus, currentStep }) => {
     {
       id: 'duckdbTool',
       type: 'duckdbTool',
-      position: { x: 50, y: 350 },
+      position: { x: 100, y: 350 },
       data: {
         label: '🔧 DuckDB Tool',
         description: 'SQL-Queries auf CSV-Daten',
@@ -158,7 +157,7 @@ const WorkflowGraph = ({ workflowStatus, currentStep }) => {
     {
       id: 'reportGenerator',
       type: 'reportGenerator',
-      position: { x: 650, y: 200 },
+      position: { x: 500, y: 200 },
       data: {
         label: '📝 Bericht-Generator',
         description: 'Erstellt professionelle Berichte',
@@ -168,37 +167,51 @@ const WorkflowGraph = ({ workflowStatus, currentStep }) => {
   ], [workflowStatus]);
 
   const initialEdges = useMemo(() => [
+    // Orchestrator zu allen Agenten
     {
       id: 'orchestrator-dataAnalyst',
       source: 'orchestrator',
       target: 'dataAnalyst',
       type: 'smoothstep',
-      animated: workflowStatus.orchestrator === 'active',
-      style: { stroke: '#3b82f6', strokeWidth: 2 },
+      animated: workflowStatus.orchestrator === 'active' || workflowStatus.dataAnalyst === 'active',
+      style: { 
+        stroke: workflowStatus.dataAnalyst === 'active' ? '#3b82f6' : '#d1d5db', 
+        strokeWidth: workflowStatus.dataAnalyst === 'active' ? 3 : 2 
+      },
     },
+    {
+      id: 'orchestrator-reportGenerator',
+      source: 'orchestrator',
+      target: 'reportGenerator',
+      type: 'smoothstep',
+      animated: workflowStatus.reportGenerator === 'active',
+      style: { 
+        stroke: workflowStatus.reportGenerator === 'active' ? '#8b5cf6' : '#d1d5db', 
+        strokeWidth: workflowStatus.reportGenerator === 'active' ? 3 : 2 
+      },
+    },
+    // DatenAnalyst zu DuckDB Tool (bidirektional)
     {
       id: 'dataAnalyst-duckdbTool',
       source: 'dataAnalyst',
       target: 'duckdbTool',
       type: 'smoothstep',
-      animated: workflowStatus.dataAnalyst === 'active',
-      style: { stroke: '#f59e0b', strokeWidth: 2 },
+      animated: workflowStatus.dataAnalyst === 'active' && workflowStatus.duckdbTool === 'active',
+      style: { 
+        stroke: workflowStatus.duckdbTool === 'active' ? '#f59e0b' : '#d1d5db', 
+        strokeWidth: workflowStatus.duckdbTool === 'active' ? 3 : 2 
+      },
     },
     {
-      id: 'duckdbTool-dataAnalyst',
+      id: 'duckdbTool-dataAnalyst-return',
       source: 'duckdbTool',
       target: 'dataAnalyst',
       type: 'smoothstep',
-      animated: workflowStatus.duckdbTool === 'completed',
-      style: { stroke: '#10b981', strokeWidth: 2 },
-    },
-    {
-      id: 'dataAnalyst-reportGenerator',
-      source: 'dataAnalyst',
-      target: 'reportGenerator',
-      type: 'smoothstep',
-      animated: workflowStatus.dataAnalyst === 'completed',
-      style: { stroke: '#8b5cf6', strokeWidth: 2 },
+      animated: workflowStatus.duckdbTool === 'completed' && workflowStatus.dataAnalyst === 'active',
+      style: { 
+        stroke: workflowStatus.duckdbTool === 'completed' ? '#10b981' : '#d1d5db', 
+        strokeWidth: workflowStatus.duckdbTool === 'completed' ? 3 : 2 
+      },
     },
   ], [workflowStatus]);
 

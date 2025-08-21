@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { 
   Info, 
   CheckCircle, 
@@ -6,19 +6,39 @@ import {
   XCircle, 
   Terminal,
   Download,
-  Trash2
+  Trash2,
+  ArrowDown,
+  Pause
 } from 'lucide-react';
 
 const LogPanel = ({ logs, onClearLogs }) => {
   const logEndRef = useRef(null);
+  const logContainerRef = useRef(null);
+  const [autoScroll, setAutoScroll] = useState(true);
 
   const scrollToBottom = () => {
-    logEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (autoScroll && logEndRef.current) {
+      logEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleManualScroll = () => {
+    if (logContainerRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = logContainerRef.current;
+      const isAtBottom = scrollHeight - scrollTop === clientHeight;
+      
+      // Auto-scroll nur aktivieren, wenn User ganz unten ist
+      if (isAtBottom && !autoScroll) {
+        setAutoScroll(true);
+      } else if (!isAtBottom && autoScroll) {
+        setAutoScroll(false);
+      }
+    }
   };
 
   useEffect(() => {
     scrollToBottom();
-  }, [logs]);
+  }, [logs, autoScroll]);
 
   const getLogIcon = (level) => {
     switch (level) {
@@ -72,6 +92,17 @@ const LogPanel = ({ logs, onClearLogs }) => {
         
         <div className="flex items-center gap-2">
           <button
+            onClick={() => setAutoScroll(!autoScroll)}
+            className={`p-2 rounded-md transition-colors ${
+              autoScroll 
+                ? 'text-blue-600 bg-blue-50 hover:bg-blue-100' 
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+            }`}
+            title={autoScroll ? "Auto-Scroll deaktivieren" : "Auto-Scroll aktivieren"}
+          >
+            {autoScroll ? <ArrowDown className="w-4 h-4" /> : <Pause className="w-4 h-4" />}
+          </button>
+          <button
             onClick={exportLogs}
             disabled={logs.length === 0}
             className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -91,7 +122,11 @@ const LogPanel = ({ logs, onClearLogs }) => {
       </div>
 
       {/* Log Content */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-2 bg-gray-50">
+      <div 
+        ref={logContainerRef}
+        onScroll={handleManualScroll}
+        className="flex-1 overflow-y-auto p-4 space-y-2 bg-gray-50"
+      >
         {logs.length === 0 ? (
           <div className="text-center py-8">
             <Terminal className="w-12 h-12 text-gray-300 mx-auto mb-3" />

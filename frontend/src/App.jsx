@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import WorkflowGraph from './components/WorkflowGraph';
-import DemoCases from './components/DemoCases';
+import DemoSelector from './components/DemoSelector';
 import LogPanel from './components/LogPanel';
 import { useWorkflowState } from './hooks/useWorkflowState';
 import { Bot, Github, ExternalLink } from 'lucide-react';
@@ -15,8 +15,6 @@ function App() {
     startDemo,
     clearLogs
   } = useWorkflowState();
-
-  const [activeTab, setActiveTab] = useState('demo');
 
   const handleStartDemo = useCallback((query, demoId) => {
     startDemo(query, demoId);
@@ -63,20 +61,26 @@ function App() {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 h-[calc(100vh-200px)]">
+      {/* Main Content - Vertical Layout */}
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="space-y-8">
           
-          {/* Left Sidebar - Demo Cases */}
-          <div className="xl:col-span-1 space-y-6">
-            <DemoCases 
-              onStartDemo={handleStartDemo}
-              isRunning={isRunning}
-            />
-            
-            {/* Quick Stats */}
+          {/* Demo Selector Section */}
+          <section className="bg-white rounded-lg shadow-lg border border-gray-200">
+            <div className="p-6">
+              <DemoSelector 
+                onStartDemo={handleStartDemo}
+                isRunning={isRunning}
+              />
+            </div>
+          </section>
+
+          {/* System Status */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-              <h3 className="font-semibold text-gray-900 mb-4">🚀 System Status</h3>
+              <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                🚀 System Status
+              </h3>
               <div className="space-y-3">
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Aktive Agenten:</span>
@@ -96,10 +100,28 @@ function App() {
                 </div>
               </div>
             </div>
+            
+            {/* Current Step Indicator */}
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 md:col-span-2">
+              <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                ⏱️ Aktueller Status
+              </h3>
+              {currentStep ? (
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                  <span className="text-gray-800">{currentStep}</span>
+                </div>
+              ) : (
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
+                  <span className="text-gray-500">System bereit - Wähle einen Demo Case</span>
+                </div>
+              )}
+            </div>
           </div>
 
-          {/* Center - Workflow Graph */}
-          <div className="xl:col-span-1 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+          {/* Workflow Graph Section */}
+          <section className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
             <div className="p-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-purple-50">
               <h2 className="text-xl font-semibold text-gray-900 flex items-center gap-2">
                 🔄 Workflow Visualisierung
@@ -108,21 +130,21 @@ function App() {
                 Live-Tracking des Multi-Agenten-Workflows
               </p>
             </div>
-            <div className="h-full">
+            <div className="h-80">
               <WorkflowGraph 
                 workflowStatus={workflowStatus}
                 currentStep={currentStep}
               />
             </div>
-          </div>
+          </section>
 
-          {/* Right Sidebar - Logs */}
-          <div className="xl:col-span-1">
+          {/* Logs Section */}
+          <section>
             <LogPanel 
               logs={logs}
               onClearLogs={clearLogs}
             />
-          </div>
+          </section>
         </div>
 
         {/* Results Section */}
@@ -133,15 +155,49 @@ function App() {
                 📊 Workflow Ergebnisse
               </h2>
               <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="font-medium text-green-800">
-                    Analyse erfolgreich abgeschlossen!
-                  </span>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="font-medium text-green-800">
+                      Analyse erfolgreich abgeschlossen!
+                    </span>
+                  </div>
+                  
+                  {/* PDF Download Button */}
+                  <button
+                    onClick={async () => {
+                      try {
+                        // Get the latest workflow ID from logs
+                        const workflowLog = logs.find(log => log.message.includes('Starte Demo:'));
+                        if (workflowLog) {
+                          const response = await fetch(`/api/workflow/workflow_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}_*/report/download`);
+                          if (response.ok) {
+                            const blob = await response.blob();
+                            const url = window.URL.createObjectURL(blob);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = `langgraph_report_${Date.now()}.pdf`;
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                            window.URL.revokeObjectURL(url);
+                          }
+                        }
+                      } catch (error) {
+                        console.error('Fehler beim Download:', error);
+                      }
+                    }}
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors text-sm"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    PDF-Bericht herunterladen
+                  </button>
                 </div>
                 <p className="text-sm text-green-700">
                   Der Multi-Agenten-Workflow wurde erfolgreich ausgeführt. 
-                  Detaillierte Ergebnisse findest du in den Logs.
+                  Detaillierte Ergebnisse findest du in den Logs oder im PDF-Bericht.
                 </p>
               </div>
             </div>
