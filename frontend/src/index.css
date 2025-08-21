@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+  
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .workflow-node {
+    @apply bg-white border-2 border-gray-200 rounded-lg p-4 shadow-md transition-all duration-300;
+  }
+  
+  .workflow-node.active {
+    @apply border-primary-500 shadow-glow;
+  }
+  
+  .workflow-node.completed {
+    @apply border-success-500 bg-success-50;
+  }
+  
+  .workflow-node.error {
+    @apply border-error-500 bg-error-50;
+  }
+  
+  .log-entry {
+    @apply p-3 rounded-md mb-2 text-sm font-mono;
+  }
+  
+  .log-entry.info {
+    @apply bg-blue-50 text-blue-800 border-l-4 border-blue-400;
+  }
+  
+  .log-entry.success {
+    @apply bg-green-50 text-green-800 border-l-4 border-green-400;
+  }
+  
+  .log-entry.warning {
+    @apply bg-yellow-50 text-yellow-800 border-l-4 border-yellow-400;
+  }
+  
+  .log-entry.error {
+    @apply bg-red-50 text-red-800 border-l-4 border-red-400;
+  }
+  
+  .demo-card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-primary-300;
+  }
+  
+  .demo-card:hover {
+    @apply transform -translate-y-1;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent;
+  }
+} 
