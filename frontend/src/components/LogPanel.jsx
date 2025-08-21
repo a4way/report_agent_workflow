@@ -14,7 +14,7 @@ import {
 const LogPanel = ({ logs, onClearLogs }) => {
   const logEndRef = useRef(null);
   const logContainerRef = useRef(null);
-  const [autoScroll, setAutoScroll] = useState(true);
+  const [autoScroll, setAutoScroll] = useState(false);
 
   const scrollToBottom = useCallback(() => {
     if (autoScroll && logEndRef.current) {

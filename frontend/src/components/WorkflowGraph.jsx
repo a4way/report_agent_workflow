@@ -5,6 +5,8 @@ import ReactFlow, {
   MiniMap,
   useNodesState,
   useEdgesState,
+  Handle,
+  Position,
 } from 'react-flow-renderer';
 import { 
   Brain, 
@@ -19,6 +21,7 @@ import {
 const nodeTypes = {
   orchestrator: ({ data }) => (
     <div className={`workflow-node ${data.status || ''}`}>
+      <Handle type="target" position={Position.Top} />
       <div className="flex items-center gap-3">
         <div className="p-2 bg-purple-100 rounded-lg">
           <Zap className="w-6 h-6 text-purple-600" />
@@ -40,11 +43,13 @@ const nodeTypes = {
           )}
         </div>
       </div>
+      <Handle type="source" position={Position.Bottom} />
     </div>
   ),
   
   dataAnalyst: ({ data }) => (
     <div className={`workflow-node ${data.status || ''}`}>
+      <Handle type="target" position={Position.Top} />
       <div className="flex items-center gap-3">
         <div className="p-2 bg-blue-100 rounded-lg">
           <BarChart3 className="w-6 h-6 text-blue-600" />
@@ -66,11 +71,13 @@ const nodeTypes = {
           )}
         </div>
       </div>
+      <Handle type="source" position={Position.Bottom} />
     </div>
   ),
   
   reportGenerator: ({ data }) => (
     <div className={`workflow-node ${data.status || ''}`}>
+      <Handle type="target" position={Position.Top} />
       <div className="flex items-center gap-3">
         <div className="p-2 bg-green-100 rounded-lg">
           <FileText className="w-6 h-6 text-green-600" />
@@ -92,11 +99,13 @@ const nodeTypes = {
           )}
         </div>
       </div>
+      <Handle type="source" position={Position.Bottom} />
     </div>
   ),
   
   duckdbTool: ({ data }) => (
     <div className={`workflow-node ${data.status || ''}`}>
+      <Handle type="target" position={Position.Top} />
       <div className="flex items-center gap-3">
         <div className="p-2 bg-orange-100 rounded-lg">
           <Database className="w-6 h-6 text-orange-600" />
@@ -118,6 +127,7 @@ const nodeTypes = {
           )}
         </div>
       </div>
+      <Handle type="source" position={Position.Bottom} />
     </div>
   ),
 };
@@ -167,72 +177,39 @@ const WorkflowGraph = ({ workflowStatus, currentStep }) => {
   ], [workflowStatus]);
 
   const initialEdges = useMemo(() => [
-    // Orchestrator zu allen Agenten - immer sichtbare Verbindungen
+    // Einfache Test-Edges erst mal
     {
       id: 'orchestrator-dataAnalyst',
       source: 'orchestrator',
       target: 'dataAnalyst',
       type: 'smoothstep',
-      animated: workflowStatus.dataAnalyst === 'active',
-      style: { 
-        stroke: workflowStatus.dataAnalyst === 'active' ? '#3b82f6' : '#9ca3af', 
-        strokeWidth: workflowStatus.dataAnalyst === 'active' ? 3 : 2 
-      },
-      markerEnd: {
-        type: 'arrowclosed',
-        color: workflowStatus.dataAnalyst === 'active' ? '#3b82f6' : '#9ca3af'
-      }
+      style: { stroke: '#3b82f6', strokeWidth: 2 }
     },
     {
       id: 'orchestrator-reportGenerator',
       source: 'orchestrator',
-      target: 'reportGenerator',
+      target: 'reportGenerator', 
       type: 'smoothstep',
-      animated: workflowStatus.reportGenerator === 'active',
-      style: { 
-        stroke: workflowStatus.reportGenerator === 'active' ? '#8b5cf6' : '#9ca3af', 
-        strokeWidth: workflowStatus.reportGenerator === 'active' ? 3 : 2 
-      },
-      markerEnd: {
-        type: 'arrowclosed',
-        color: workflowStatus.reportGenerator === 'active' ? '#8b5cf6' : '#9ca3af'
-      }
+      style: { stroke: '#8b5cf6', strokeWidth: 2 }
     },
-    // DatenAnalyst zu DuckDB Tool (bidirektional)
     {
       id: 'dataAnalyst-duckdbTool',
       source: 'dataAnalyst',
       target: 'duckdbTool',
       type: 'smoothstep',
-      animated: workflowStatus.duckdbTool === 'active',
-      style: { 
-        stroke: workflowStatus.duckdbTool === 'active' ? '#f59e0b' : '#9ca3af', 
-        strokeWidth: workflowStatus.duckdbTool === 'active' ? 3 : 2 
-      },
-      markerEnd: {
-        type: 'arrowclosed',
-        color: workflowStatus.duckdbTool === 'active' ? '#f59e0b' : '#9ca3af'
-      }
+      style: { stroke: '#f59e0b', strokeWidth: 2 }
     },
     {
       id: 'duckdbTool-dataAnalyst-return',
       source: 'duckdbTool',
       target: 'dataAnalyst',
       type: 'smoothstep',
-      animated: workflowStatus.duckdbTool === 'completed',
-      style: { 
-        stroke: workflowStatus.duckdbTool === 'completed' ? '#10b981' : '#9ca3af', 
-        strokeWidth: workflowStatus.duckdbTool === 'completed' ? 3 : 2 
-      },
-      markerEnd: {
-        type: 'arrowclosed',
-        color: workflowStatus.duckdbTool === 'completed' ? '#10b981' : '#9ca3af'
-      }
-    },
+      style: { stroke: '#10b981', strokeWidth: 2 }
+    }
   ], [workflowStatus]);
 
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [nodes, setNodes, onNodesChange] = useNodesState([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
 
   // Update nodes when workflowStatus changes
   React.useEffect(() => {
@@ -253,6 +230,12 @@ const WorkflowGraph = ({ workflowStatus, currentStep }) => {
         nodeTypes={nodeTypes}
         fitView
         attributionPosition="bottom-left"
+        connectionLineType="smoothstep"
+        defaultEdgeOptions={{
+          type: 'smoothstep',
+          animated: false,
+          style: { strokeWidth: 2 }
+        }}
       >
         <Background color="#e5e7eb" gap={20} />
         <Controls />

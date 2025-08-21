@@ -4,6 +4,7 @@ FastAPI Web-API für das LangGraph Multi-Agenten Frontend
 """
 import asyncio
 import json
+import os
 from datetime import datetime
 from typing import Dict, Any, Optional
 from fastapi import FastAPI, HTTPException, BackgroundTasks

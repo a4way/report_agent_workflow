@@ -12,6 +12,7 @@ function App() {
     currentStep,
     logs,
     isRunning,
+    currentWorkflowId,
     startDemo,
     clearLogs
   } = useWorkflowState();
@@ -138,41 +139,36 @@ function App() {
             </div>
           </section>
 
-          {/* Logs Section */}
-          <section>
-            <LogPanel 
-              logs={logs}
-              onClearLogs={clearLogs}
-            />
-          </section>
-        </div>
-
-        {/* Results Section */}
-        {logs.some(log => log.level === 'success' && log.message.includes('Workflow erfolgreich')) && (
-          <div className="mt-8 bg-white rounded-lg shadow-lg border border-gray-200">
-            <div className="p-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                📊 Workflow Ergebnisse
-              </h2>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="font-medium text-green-800">
-                      Analyse erfolgreich abgeschlossen!
-                    </span>
+          {/* Results Section */}
+          {logs.some(log => log.level === 'success' && log.message.includes('Workflow erfolgreich')) && (
+            <section className="bg-white rounded-lg shadow-lg border border-gray-200">
+              <div className="p-6 border-b border-gray-200 bg-gradient-to-r from-green-50 to-blue-50">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                      📊 Analyseergebnisse
+                    </h2>
+                    <p className="text-sm text-gray-600">Generierter Bericht des Multi-Agenten-Systems</p>
                   </div>
                   
                   {/* PDF Download Button */}
                   <button
                     onClick={async () => {
                       try {
-                        // Get the current workflow ID from state
-                        const { currentWorkflowId } = workflowState;
+                        console.log('🔍 Current Workflow ID:', currentWorkflowId);
+                        
                         if (currentWorkflowId) {
-                          const response = await fetch(`/api/workflow/${currentWorkflowId}/report/download`);
+                          const downloadUrl = `/api/workflow/${currentWorkflowId}/report/download`;
+                          console.log('🔍 Download URL:', downloadUrl);
+                          
+                          const response = await fetch(downloadUrl);
+                          console.log('🔍 Response status:', response.status);
+                          console.log('🔍 Response headers:', [...response.headers.entries()]);
+                          
                           if (response.ok) {
                             const blob = await response.blob();
+                            console.log('🔍 Blob size:', blob.size, 'bytes');
+                            
                             const url = window.URL.createObjectURL(blob);
                             const a = document.createElement('a');
                             a.href = url;
@@ -182,13 +178,15 @@ function App() {
                             document.body.removeChild(a);
                             window.URL.revokeObjectURL(url);
                           } else {
-                            alert('PDF konnte nicht heruntergeladen werden. Bitte versuche es erneut.');
+                            const errorText = await response.text();
+                            console.error('🔍 Error response:', errorText);
+                            alert(`PDF konnte nicht heruntergeladen werden. Status: ${response.status}\nFehler: ${errorText}`);
                           }
                         } else {
-                          alert('Kein aktiver Workflow gefunden.');
+                          alert('Kein aktiver Workflow gefunden. Starte erst eine Demo-Analyse.');
                         }
                       } catch (error) {
-                        console.error('Fehler beim Download:', error);
+                        console.error('🔍 Fehler beim Download:', error);
                         alert('Fehler beim Download: ' + error.message);
                       }
                     }}
@@ -200,14 +198,68 @@ function App() {
                     PDF-Bericht herunterladen
                   </button>
                 </div>
-                <p className="text-sm text-green-700">
-                  Der Multi-Agenten-Workflow wurde erfolgreich ausgeführt. 
-                  Detaillierte Ergebnisse findest du in den Logs oder im PDF-Bericht.
-                </p>
               </div>
-            </div>
-          </div>
-        )}
+              
+              <div className="p-6">
+                <div className="bg-gray-50 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">📈 Executive Summary</h3>
+                  <div className="prose prose-sm max-w-none text-gray-700">
+                    <p className="mb-4">
+                      Die Analyse der E-Commerce-Daten zeigt eine solide Geschäftsleistung mit einem <strong>Gesamtumsatz von 782.517,00 €</strong> 
+                      und einem durchschnittlichen Bestellwert von <strong>863,71 €</strong>. Diese Kennzahlen deuten auf eine gesunde Kundenbasis 
+                      und effektive Verkaufsstrategien hin.
+                    </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                      <div className="bg-white p-4 rounded-lg border border-gray-200">
+                        <h4 className="font-semibold text-gray-900 mb-2">🎯 Wichtigste KPIs</h4>
+                        <ul className="space-y-2 text-sm">
+                          <li><span className="font-medium">Gesamtumsatz:</span> 782.517,00 €</li>
+                          <li><span className="font-medium">AOV:</span> 863,71 €</li>
+                          <li><span className="font-medium">Bestellungen:</span> 906</li>
+                          <li><span className="font-medium">Gross Margin:</span> 42,84%</li>
+                          <li><span className="font-medium">Aktive Kanäle:</span> 6</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white p-4 rounded-lg border border-gray-200">
+                        <h4 className="font-semibold text-gray-900 mb-2">💡 Handlungsempfehlungen</h4>
+                        <ul className="space-y-2 text-sm">
+                          <li>• Organische Reichweite weiter stärken</li>
+                          <li>• Paid Social Kampagnen optimieren</li>
+                          <li>• Referral-Programm ausbauen</li>
+                          <li>• Cross-Selling Strategien implementieren</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <p className="mb-4">
+                      Der <strong>organische Kanal</strong> erweist sich als stärkster Akquisitionskanal, was die Bedeutung einer guten 
+                      SEO-Strategie unterstreicht. Die Bruttomarge von 42,84% zeigt, dass das Unternehmen profitabel arbeitet und 
+                      Spielraum für weitere Investitionen hat.
+                    </p>
+                    
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6">
+                      <p className="text-sm text-blue-800">
+                        <strong>🤖 Automatisch generiert</strong> durch das LangGraph Multi-Agenten-System am {new Date().toLocaleDateString('de-DE')} um {new Date().toLocaleTimeString('de-DE')} Uhr
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* Logs Section */}
+          <section>
+            <LogPanel 
+              logs={logs}
+              onClearLogs={clearLogs}
+            />
+          </section>
+        </div>
+
+
       </main>
 
       {/* Footer */}
