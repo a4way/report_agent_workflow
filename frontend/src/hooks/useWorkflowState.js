@@ -12,6 +12,7 @@ export const useWorkflowState = () => {
   const [currentStep, setCurrentStep] = useState('');
   const [logs, setLogs] = useState([]);
   const [isRunning, setIsRunning] = useState(false);
+  const [currentWorkflowId, setCurrentWorkflowId] = useState(null);
   const abortControllerRef = useRef(null);
 
   const addLog = useCallback((level, message, agent = null, details = null) => {
@@ -140,6 +141,7 @@ export const useWorkflowState = () => {
       });
       
       if (response.data.success) {
+        setCurrentWorkflowId(response.data.workflow_id);
         addLog('success', '✅ Backend-API erfolgreich erreicht', 'System');
         // Handle real backend response here
         // For now, we'll still use simulation
@@ -148,6 +150,9 @@ export const useWorkflowState = () => {
     } catch (error) {
       if (error.name !== 'CanceledError') {
         addLog('warning', '⚠️ Backend nicht erreichbar - verwende Demo-Simulation', 'System');
+        // Generate a mock workflow ID for simulation
+        const mockWorkflowId = `workflow_${Date.now()}`;
+        setCurrentWorkflowId(mockWorkflowId);
         await simulateWorkflowProgress(query, demoId);
       }
     }
@@ -178,6 +183,7 @@ export const useWorkflowState = () => {
     currentStep,
     logs,
     isRunning,
+    currentWorkflowId,
     startDemo,
     stopWorkflow,
     clearLogs

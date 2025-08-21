@@ -167,10 +167,10 @@ function App() {
                   <button
                     onClick={async () => {
                       try {
-                        // Get the latest workflow ID from logs
-                        const workflowLog = logs.find(log => log.message.includes('Starte Demo:'));
-                        if (workflowLog) {
-                          const response = await fetch(`/api/workflow/workflow_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}_*/report/download`);
+                        // Get the current workflow ID from state
+                        const { currentWorkflowId } = workflowState;
+                        if (currentWorkflowId) {
+                          const response = await fetch(`/api/workflow/${currentWorkflowId}/report/download`);
                           if (response.ok) {
                             const blob = await response.blob();
                             const url = window.URL.createObjectURL(blob);
@@ -181,10 +181,15 @@ function App() {
                             a.click();
                             document.body.removeChild(a);
                             window.URL.revokeObjectURL(url);
+                          } else {
+                            alert('PDF konnte nicht heruntergeladen werden. Bitte versuche es erneut.');
                           }
+                        } else {
+                          alert('Kein aktiver Workflow gefunden.');
                         }
                       } catch (error) {
                         console.error('Fehler beim Download:', error);
+                        alert('Fehler beim Download: ' + error.message);
                       }
                     }}
                     className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors text-sm"

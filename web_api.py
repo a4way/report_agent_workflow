@@ -299,7 +299,8 @@ if __name__ == "__main__":
     print("📋 API Docs: http://localhost:8000/api/docs")
     print("🔄 Backend API: http://localhost:8000/api/health")
     print("")
-    
+
+if __name__ == "__main__":
     try:
         uvicorn.run(
             app,

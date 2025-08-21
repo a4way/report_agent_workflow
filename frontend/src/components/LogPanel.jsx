@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { 
   Info, 
   CheckCircle, 
@@ -16,16 +16,16 @@ const LogPanel = ({ logs, onClearLogs }) => {
   const logContainerRef = useRef(null);
   const [autoScroll, setAutoScroll] = useState(true);
 
-  const scrollToBottom = () => {
+  const scrollToBottom = useCallback(() => {
     if (autoScroll && logEndRef.current) {
       logEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  };
+  }, [autoScroll]);
 
   const handleManualScroll = () => {
     if (logContainerRef.current) {
       const { scrollTop, scrollHeight, clientHeight } = logContainerRef.current;
-      const isAtBottom = scrollHeight - scrollTop === clientHeight;
+      const isAtBottom = Math.abs(scrollHeight - scrollTop - clientHeight) < 5; // 5px Toleranz
       
       // Auto-scroll nur aktivieren, wenn User ganz unten ist
       if (isAtBottom && !autoScroll) {
@@ -38,7 +38,7 @@ const LogPanel = ({ logs, onClearLogs }) => {
 
   useEffect(() => {
     scrollToBottom();
-  }, [logs, autoScroll]);
+  }, [logs, scrollToBottom]);
 
   const getLogIcon = (level) => {
     switch (level) {
